@@ -1,0 +1,2704 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Классификация на 5 звёзд</title>
+        <meta
+            name="description"
+            content="Классификация гостиницы на 5 звёзд: требования к номерам, завтраку и услугам, стоимость от 85 000 ₽. Центр сертификации Промо."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --bg: #f6f3ec;
+                --surface: #ffffff;
+                --surface-2: #efe9dc;
+                --ink: #14182b;
+                --ink-2: #4a4f63;
+                --muted: #7c8093;
+                --line: #e2dccd;
+                --brand: #1c2550;
+                --brand-2: #2c3a7a;
+                --gold: #c99a2e;
+                --gold-soft: #f4e6c2;
+                --ok: #2f8f5b;
+                --on-brand: #f6f3ec;
+                --shadow:
+                    0 1px 2px rgba(20, 24, 43, 0.05),
+                    0 12px 32px -12px rgba(20, 24, 43, 0.18);
+                --r: 18px;
+            }
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) {
+                    --bg: #0e1120;
+                    --surface: #161a2e;
+                    --surface-2: #1d2240;
+                    --ink: #eef0f7;
+                    --ink-2: #b7bbcf;
+                    --muted: #878ca6;
+                    --line: #272d4d;
+                    --brand: #232c5e;
+                    --brand-2: #3a4aa0;
+                    --gold: #e0b24a;
+                    --gold-soft: #3a3220;
+                    --on-brand: #f6f3ec;
+                    --shadow:
+                        0 1px 2px rgba(0, 0, 0, 0.3),
+                        0 12px 32px -12px rgba(0, 0, 0, 0.6);
+                }
+            }
+            :root[data-theme="dark"] {
+                --bg: #0e1120;
+                --surface: #161a2e;
+                --surface-2: #1d2240;
+                --ink: #eef0f7;
+                --ink-2: #b7bbcf;
+                --muted: #878ca6;
+                --line: #272d4d;
+                --brand: #232c5e;
+                --brand-2: #3a4aa0;
+                --gold: #e0b24a;
+                --gold-soft: #3a3220;
+                --on-brand: #f6f3ec;
+                --shadow:
+                    0 1px 2px rgba(0, 0, 0, 0.3),
+                    0 12px 32px -12px rgba(0, 0, 0, 0.6);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                background: var(--bg);
+                color: var(--ink);
+                font:
+                    400 16px/1.6 Manrope,
+                    system-ui,
+                    sans-serif;
+                -webkit-font-smoothing: antialiased;
+                overflow-x: hidden;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            h1,
+            h2,
+            h3 {
+                font-family: Unbounded, Manrope, sans-serif;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+                line-height: 1.15;
+            }
+            .wrap {
+                max-width: 1180px;
+                margin: 0 auto;
+                padding: 0 16px;
+            }
+            @media (min-width: 720px) {
+                .wrap {
+                    padding: 0 28px;
+                }
+            }
+            section {
+                padding: 72px 0;
+            }
+            @media (min-width: 900px) {
+                section {
+                    padding: 104px 0;
+                }
+            }
+            .eyebrow {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: var(--gold);
+            }
+            .eyebrow::before {
+                content: "";
+                width: 22px;
+                height: 2px;
+                background: var(--gold);
+            }
+            .h2 {
+                font-size: clamp(28px, 4vw, 44px);
+                margin: 14px 0 16px;
+            }
+            .lead {
+                color: var(--ink-2);
+                font-size: 17px;
+                max-width: 680px;
+            }
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 14px 22px;
+                border-radius: 999px;
+                font-weight: 700;
+                font-size: 15px;
+                border: 0;
+                cursor: pointer;
+                transition:
+                    transform 0.15s,
+                    background 0.2s,
+                    box-shadow 0.2s;
+                font-family: inherit;
+            }
+            .btn:hover {
+                transform: translateY(-1px);
+            }
+            .btn-gold {
+                background: var(--gold);
+                color: #1a1405;
+                box-shadow: 0 8px 24px -10px var(--gold);
+            }
+            .btn-ghost {
+                background: transparent;
+                color: var(--on-brand);
+                border: 1.5px solid rgba(246, 243, 236, 0.35);
+            }
+            .btn-ghost:hover {
+                border-color: var(--on-brand);
+            }
+            .btn-dark {
+                background: var(--brand);
+                color: var(--on-brand);
+            }
+
+            /* topbar */
+            .topbar {
+                background: var(--brand);
+                color: var(--on-brand);
+                font-size: 13px;
+            }
+            .topbar .wrap {
+                display: flex;
+                gap: 18px;
+                align-items: center;
+                justify-content: space-between;
+                height: 38px;
+            }
+            .topbar .tb-left {
+                display: none;
+                gap: 18px;
+                opacity: 0.85;
+                white-space: nowrap;
+            }
+            @media (min-width: 720px) {
+                .topbar .tb-left {
+                    display: flex;
+                }
+            }
+            .topbar .tb-left span:nth-child(2) {
+                display: none;
+            }
+            @media (min-width: 720px) {
+                .topbar .tb-left span:nth-child(2) {
+                    display: inline;
+                }
+            }
+            .topbar .tb-right {
+                display: flex;
+                gap: 14px;
+                white-space: nowrap;
+                margin-left: auto;
+            }
+            .topbar .tb-right a {
+                opacity: 0.85;
+            }
+            .topbar .tb-right a:hover {
+                opacity: 1;
+                color: var(--gold);
+            }
+
+            /* header */
+            header.nav {
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                background: color-mix(in srgb, var(--bg) 85%, transparent);
+                backdrop-filter: blur(14px);
+                border-bottom: 1px solid var(--line);
+            }
+            .nav .wrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 70px;
+                gap: 16px;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-weight: 700;
+                font-size: 17px;
+            }
+            .logo-mark {
+                width: 38px;
+                height: 38px;
+                border-radius: 11px;
+                background: var(--brand);
+                display: grid;
+                place-items: center;
+                color: var(--gold);
+            }
+            .logo small {
+                display: block;
+                font-family: Manrope, system-ui, sans-serif;
+                font-weight: 600;
+                font-size: 11px;
+                color: var(--muted);
+                letter-spacing: 0.04em;
+            }
+            .menu {
+                display: none;
+                gap: 26px;
+                font-weight: 600;
+                font-size: 15px;
+                color: var(--ink-2);
+            }
+            .menu a:hover {
+                color: var(--ink);
+            }
+            .nav-cta {
+                display: none;
+            }
+            @media (min-width: 980px) {
+                .menu {
+                    display: flex;
+                }
+                .nav-cta {
+                    display: inline-flex;
+                }
+                .burger {
+                    display: none !important;
+                }
+            }
+            .burger {
+                display: grid;
+                place-items: center;
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+                border: 1px solid var(--line);
+                background: var(--surface);
+                cursor: pointer;
+                color: var(--ink);
+            }
+            .mobile-menu {
+                display: none;
+                border-top: 1px solid var(--line);
+                padding: 12px 16px 20px;
+                background: var(--bg);
+            }
+            .mobile-menu.open {
+                display: grid;
+                gap: 4px;
+            }
+            .mobile-menu a {
+                padding: 12px 4px;
+                font-weight: 600;
+                border-bottom: 1px solid var(--line);
+            }
+
+            /* hero */
+            .hero {
+                position: relative;
+                background: var(--brand);
+                color: var(--on-brand);
+                padding: 64px 0 88px;
+                overflow: hidden;
+            }
+            .hero::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background:
+                    radial-gradient(
+                        600px 400px at 85% 10%,
+                        rgba(201, 154, 46, 0.28),
+                        transparent 60%
+                    ),
+                    radial-gradient(
+                        500px 360px at 0% 100%,
+                        rgba(90, 110, 220, 0.35),
+                        transparent 60%
+                    );
+            }
+            .hero::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image:
+                    linear-gradient(
+                        rgba(255, 255, 255, 0.05) 1px,
+                        transparent 1px
+                    ),
+                    linear-gradient(
+                        90deg,
+                        rgba(255, 255, 255, 0.05) 1px,
+                        transparent 1px
+                    );
+                background-size: 48px 48px;
+                mask-image: linear-gradient(180deg, #000, transparent 85%);
+            }
+            .hero .wrap {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                gap: 48px;
+            }
+            @media (min-width: 980px) {
+                .hero {
+                    padding: 96px 0 120px;
+                }
+                .hero .wrap {
+                    grid-template-columns: 1.25fr 0.9fr;
+                    align-items: center;
+                }
+            }
+            .pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 7px 14px 7px 8px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .pill b {
+                white-space: nowrap;
+                flex: none;
+                background: var(--gold);
+                color: #1a1405;
+                border-radius: 999px;
+                padding: 2px 9px;
+                font-size: 12px;
+            }
+            .hero h1 {
+                font-size: clamp(32px, 5.4vw, 60px);
+                margin: 22px 0 20px;
+            }
+            .hero h1 em {
+                font-style: normal;
+                color: var(--gold);
+            }
+            .hero p.sub {
+                font-size: 18px;
+                opacity: 0.82;
+                max-width: 560px;
+            }
+            .hero-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 32px;
+            }
+            .hero-stats {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+                margin-top: 44px;
+                max-width: 560px;
+            }
+            .hero-stats div {
+                border-left: 2px solid var(--gold);
+                padding-left: 12px;
+            }
+            .hero-stats strong {
+                display: block;
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: clamp(20px, 3vw, 28px);
+            }
+            .hero-stats span {
+                font-size: 13px;
+                opacity: 0.7;
+            }
+            .hero-card {
+                background: rgba(255, 255, 255, 0.06);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                border-radius: 24px;
+                padding: 26px;
+                backdrop-filter: blur(8px);
+            }
+            .hero-card h3 {
+                font-size: 16px;
+                margin-bottom: 6px;
+            }
+            .hero-card .muted {
+                opacity: 0.7;
+                font-size: 14px;
+                margin-bottom: 18px;
+            }
+            .star-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 13px 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .stars {
+                color: var(--gold);
+                letter-spacing: 2px;
+                font-size: 15px;
+            }
+            .stars .off {
+                opacity: 0.22;
+            }
+            .star-row .price {
+                font-weight: 800;
+            }
+
+            /* services */
+            .grid-3 {
+                display: grid;
+                gap: 18px;
+                margin-top: 44px;
+            }
+            @media (min-width: 700px) {
+                .grid-3 {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (min-width: 1040px) {
+                .grid-3 {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            .card {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: var(--r);
+                padding: 26px;
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                box-shadow: var(--shadow);
+                transition:
+                    transform 0.2s,
+                    border-color 0.2s;
+            }
+            .card:hover {
+                transform: translateY(-3px);
+                border-color: var(--gold);
+            }
+            .ic {
+                width: 48px;
+                height: 48px;
+                border-radius: 14px;
+                background: var(--gold-soft);
+                color: var(--gold);
+                display: grid;
+                place-items: center;
+            }
+            .card h3 {
+                font-size: 18px;
+            }
+            .card p {
+                color: var(--ink-2);
+                font-size: 15px;
+                flex: 1;
+            }
+            .meta {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                border-top: 1px dashed var(--line);
+                padding-top: 14px;
+                margin-top: 4px;
+            }
+            .chip {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 13px;
+                font-weight: 600;
+                padding: 6px 11px;
+                border-radius: 999px;
+                background: var(--surface-2);
+                color: var(--ink-2);
+            }
+            .chip.price {
+                background: var(--brand);
+                color: var(--on-brand);
+            }
+            .card.featured {
+                background: var(--brand);
+                color: var(--on-brand);
+                border-color: var(--brand);
+            }
+            .card.featured p {
+                color: rgba(246, 243, 236, 0.75);
+            }
+            .card.featured .chip {
+                background: rgba(255, 255, 255, 0.1);
+                color: var(--on-brand);
+            }
+            .card.featured .chip.price {
+                background: var(--gold);
+                color: #1a1405;
+            }
+            .card.featured .ic {
+                background: rgba(201, 154, 46, 0.2);
+            }
+            .tag {
+                align-self: flex-start;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: var(--gold);
+            }
+
+            /* alert band */
+            .band {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 28px;
+                padding: 32px;
+                display: grid;
+                gap: 28px;
+                box-shadow: var(--shadow);
+            }
+            @media (min-width: 900px) {
+                .band {
+                    grid-template-columns: 1fr 1.1fr;
+                    padding: 48px;
+                    gap: 48px;
+                }
+            }
+            .band h2 {
+                font-size: clamp(24px, 3vw, 34px);
+                margin: 12px 0;
+            }
+            .ul-check {
+                list-style: none;
+                display: grid;
+                gap: 14px;
+            }
+            .ul-check li {
+                display: flex;
+                gap: 12px;
+                color: var(--ink-2);
+            }
+            .ul-check li svg {
+                flex: none;
+                margin-top: 3px;
+                color: var(--ok);
+            }
+            .fine {
+                margin-top: 20px;
+                display: flex;
+                gap: 14px;
+                align-items: center;
+                padding: 16px 18px;
+                border-radius: 14px;
+                background: var(--gold-soft);
+                font-weight: 600;
+                font-size: 14px;
+            }
+            .fine strong {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 22px;
+                color: var(--gold);
+                white-space: nowrap;
+            }
+            .law {
+                font-size: 13px;
+                color: var(--muted);
+                margin-top: 18px;
+            }
+
+            /* tabs / docs */
+            .tabs {
+                display: inline-flex;
+                background: var(--surface-2);
+                border-radius: 999px;
+                padding: 5px;
+                margin: 32px 0 22px;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+            .tabs button {
+                border: 0;
+                background: transparent;
+                font:
+                    600 14px Manrope,
+                    system-ui,
+                    sans-serif;
+                color: var(--ink-2);
+                padding: 10px 18px;
+                border-radius: 999px;
+                cursor: pointer;
+            }
+            .tabs button.on {
+                background: var(--surface);
+                color: var(--ink);
+                box-shadow: var(--shadow);
+            }
+            .docs {
+                display: none;
+                gap: 14px;
+            }
+            .docs.on {
+                display: grid;
+            }
+            @media (min-width: 800px) {
+                .docs.on {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            .doc {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: var(--r);
+                padding: 22px;
+                position: relative;
+            }
+            .doc .n {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 30px;
+                color: var(--gold);
+                opacity: 0.9;
+                line-height: 1;
+            }
+            .doc h4 {
+                font-size: 16px;
+                margin: 12px 0 6px;
+            }
+            .doc p {
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            .note {
+                margin-top: 16px;
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            .note a {
+                color: var(--brand-2);
+                font-weight: 700;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+            :root[data-theme="dark"] .note a {
+                color: var(--gold);
+            }
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) .note a {
+                    color: var(--gold);
+                }
+            }
+
+            /* price table */
+            .ptable {
+                margin-top: 40px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 24px;
+                overflow: hidden;
+                box-shadow: var(--shadow);
+            }
+            .prow {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 12px;
+                align-items: center;
+                padding: 18px 22px;
+                border-top: 1px solid var(--line);
+            }
+            .prow:first-child {
+                border-top: 0;
+            }
+            .prow .name {
+                font-weight: 700;
+            }
+            .prow .name small {
+                display: block;
+                font-weight: 500;
+                color: var(--muted);
+                font-size: 13px;
+            }
+            .prow .val {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 17px;
+                white-space: nowrap;
+            }
+            .prow .val span {
+                font-family: Manrope, system-ui, sans-serif;
+                font-size: 13px;
+                color: var(--muted);
+                font-weight: 600;
+                margin-right: 4px;
+            }
+            @media (min-width: 720px) {
+                .prow {
+                    grid-template-columns: 200px 1fr auto;
+                    padding: 20px 28px;
+                }
+                .prow .stars {
+                    font-size: 18px;
+                }
+            }
+            .prow .stars-cell {
+                display: none;
+            }
+            @media (min-width: 720px) {
+                .prow .stars-cell {
+                    display: block;
+                }
+            }
+
+            /* ISO */
+            .iso-grid {
+                display: grid;
+                gap: 12px;
+                margin-top: 40px;
+            }
+            @media (min-width: 640px) {
+                .iso-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (min-width: 1000px) {
+                .iso-grid {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+            .iso {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 16px;
+                padding: 18px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+            .iso b {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 16px;
+            }
+            .iso span {
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            .iso em {
+                font-style: normal;
+                font-weight: 800;
+                font-size: 13px;
+                color: var(--gold);
+                margin-top: auto;
+                padding-top: 6px;
+            }
+
+            /* why */
+            .dark-sec {
+                background: var(--brand);
+                color: var(--on-brand);
+            }
+            .dark-sec .lead {
+                color: rgba(246, 243, 236, 0.75);
+            }
+            .why {
+                display: grid;
+                gap: 14px;
+                margin-top: 44px;
+            }
+            @media (min-width: 640px) {
+                .why {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (min-width: 1000px) {
+                .why {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            .why div {
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                border-radius: 18px;
+                padding: 22px;
+                display: flex;
+                gap: 14px;
+                align-items: flex-start;
+                background: rgba(255, 255, 255, 0.03);
+            }
+            .why svg {
+                flex: none;
+                color: var(--gold);
+            }
+            .why b {
+                display: block;
+                font-size: 16px;
+                margin-bottom: 2px;
+            }
+            .why span {
+                font-size: 14px;
+                opacity: 0.7;
+            }
+            .steps {
+                display: grid;
+                gap: 14px;
+                margin-top: 56px;
+                counter-reset: s;
+            }
+            @media (min-width: 900px) {
+                .steps {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+            .step {
+                counter-increment: s;
+                padding-top: 18px;
+                border-top: 2px solid rgba(255, 255, 255, 0.15);
+            }
+            .step::before {
+                content: "0" counter(s);
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                color: var(--gold);
+                font-size: 14px;
+            }
+            .step b {
+                display: block;
+                margin: 8px 0 4px;
+                font-size: 16px;
+            }
+            .step span {
+                font-size: 14px;
+                opacity: 0.7;
+            }
+
+            /* geo */
+            .geo-head {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: end;
+                justify-content: space-between;
+            }
+            .search {
+                position: relative;
+                width: 100%;
+                max-width: 380px;
+            }
+            .search input {
+                width: 100%;
+                padding: 14px 16px 14px 44px;
+                border-radius: 999px;
+                border: 1px solid var(--line);
+                background: var(--surface);
+                color: var(--ink);
+                font:
+                    500 15px Manrope,
+                    system-ui,
+                    sans-serif;
+                outline: none;
+            }
+            .search input:focus {
+                border-color: var(--gold);
+            }
+            .search svg {
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--muted);
+            }
+            .hubs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 32px 0 24px;
+            }
+            .hubs span {
+                padding: 8px 14px;
+                border-radius: 999px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .regions {
+                display: grid;
+                gap: 10px;
+            }
+            @media (min-width: 800px) {
+                .regions {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            details.reg {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                padding: 0 18px;
+            }
+            details.reg summary {
+                cursor: pointer;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 0;
+                font-weight: 700;
+                gap: 10px;
+            }
+            details.reg summary::-webkit-details-marker {
+                display: none;
+            }
+            details.reg summary small {
+                color: var(--muted);
+                font-weight: 600;
+                font-size: 13px;
+                white-space: nowrap;
+            }
+            details.reg p {
+                padding: 0 0 16px;
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            details.reg mark {
+                background: var(--gold-soft);
+                color: inherit;
+                border-radius: 4px;
+                padding: 0 2px;
+            }
+            .empty {
+                display: none;
+                color: var(--muted);
+                padding: 20px 0;
+            }
+
+            /* form */
+            .contact {
+                display: grid;
+                gap: 28px;
+            }
+            @media (min-width: 980px) {
+                .contact {
+                    grid-template-columns: 0.9fr 1.1fr;
+                    gap: 48px;
+                }
+            }
+            .c-list {
+                display: grid;
+                gap: 12px;
+                margin-top: 28px;
+            }
+            .c-item {
+                display: flex;
+                gap: 14px;
+                align-items: center;
+                padding: 16px 18px;
+                border-radius: 16px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                transition: border-color 0.2s;
+            }
+            .c-item:hover {
+                border-color: var(--gold);
+            }
+            .c-item .ic {
+                width: 42px;
+                height: 42px;
+                border-radius: 12px;
+            }
+            .c-item small {
+                display: block;
+                color: var(--muted);
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+            .c-item b {
+                font-size: 16px;
+            }
+            form.f {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 24px;
+                padding: 26px;
+                box-shadow: var(--shadow);
+                display: grid;
+                gap: 14px;
+            }
+            @media (min-width: 640px) {
+                form.f {
+                    padding: 34px;
+                    grid-template-columns: 1fr 1fr;
+                }
+                .f .full {
+                    grid-column: 1/-1;
+                }
+            }
+            .f label {
+                display: grid;
+                gap: 6px;
+                font-size: 13px;
+                font-weight: 700;
+                color: var(--ink-2);
+            }
+            .f input,
+            .f select,
+            .f textarea {
+                width: 100%;
+                padding: 13px 14px;
+                border-radius: 12px;
+                border: 1px solid var(--line);
+                background: var(--bg);
+                color: var(--ink);
+                font:
+                    500 15px Manrope,
+                    system-ui,
+                    sans-serif;
+                outline: none;
+                transition: border-color 0.2s;
+            }
+            .f input:focus,
+            .f select:focus,
+            .f textarea:focus {
+                border-color: var(--gold);
+            }
+            .f textarea {
+                min-height: 100px;
+                resize: vertical;
+            }
+            .seg {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            .seg label {
+                display: block;
+                cursor: pointer;
+            }
+            .seg input {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+                width: auto;
+            }
+            .seg span {
+                display: inline-block;
+                padding: 10px 16px;
+                border-radius: 999px;
+                border: 1px solid var(--line);
+                font-weight: 600;
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            .seg input:checked + span {
+                background: var(--brand);
+                border-color: var(--brand);
+                color: var(--on-brand);
+            }
+            .f .consent {
+                font-size: 12px;
+                color: var(--muted);
+                font-weight: 500;
+            }
+            .f .btn {
+                width: 100%;
+            }
+            .ok-msg {
+                display: none;
+                padding: 14px;
+                border-radius: 12px;
+                background: var(--gold-soft);
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+            footer {
+                background: var(--ink);
+                color: var(--bg);
+                padding: 56px 0 28px;
+            }
+            :root[data-theme="dark"] footer {
+                background: #070912;
+                color: var(--ink);
+            }
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) footer {
+                    background: #070912;
+                    color: var(--ink);
+                }
+            }
+            .f-grid {
+                display: grid;
+                gap: 32px;
+            }
+            @media (min-width: 900px) {
+                .f-grid {
+                    grid-template-columns: 1.2fr 1fr 1fr;
+                }
+            }
+            footer h5 {
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                opacity: 0.55;
+                margin-bottom: 14px;
+                font-weight: 700;
+            }
+            footer .links {
+                display: grid;
+                gap: 8px;
+                font-size: 15px;
+            }
+            footer .links a {
+                opacity: 0.85;
+            }
+            footer .links a:hover {
+                opacity: 1;
+                color: var(--gold);
+            }
+            footer .copy {
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                margin-top: 40px;
+                padding-top: 22px;
+                font-size: 13px;
+                opacity: 0.55;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 12px;
+            }
+            .theme-t {
+                background: none;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: inherit;
+                border-radius: 999px;
+                padding: 6px 12px;
+                font:
+                    600 12px Manrope,
+                    system-ui,
+                    sans-serif;
+                cursor: pointer;
+            }
+
+            .reveal {
+                opacity: 0;
+                transform: translateY(18px);
+                transition:
+                    opacity 0.7s,
+                    transform 0.7s;
+            }
+            .reveal.in {
+                opacity: 1;
+                transform: none;
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .reveal {
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
+                }
+                html {
+                    scroll-behavior: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="wrap">
+                <div class="tb-left">
+                    <span>Работаем по всей России</span
+                    ><span>Бесплатная консультация</span>
+                </div>
+                <div class="tb-right">
+                    <a href="tel:+79920100537">+7 (992) 010-05-37</a
+                    ><a
+                        href="https://t.me/Olga36541"
+                        target="_blank"
+                        rel="noopener"
+                        >Telegram</a
+                    ><a
+                        href="https://vk.com/promoural"
+                        target="_blank"
+                        rel="noopener"
+                        >VK</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <header class="nav">
+            <div class="wrap">
+                <a href="sertifikats-site.html" class="logo">
+                    <span class="logo-mark"
+                        ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"
+                            /></svg
+                    ></span>
+                    <span>Промо<small>ЦЕНТР СЕРТИФИКАЦИИ</small></span>
+                </a>
+                <nav class="menu">
+                    <a href="sertifikats-site.html#services">Услуги</a
+                    ><a href="sertifikats-site.html#prices">Цены</a
+                    ><a href="sertifikats-site.html#docs">Документы</a
+                    ><a href="sertifikats-site.html#iso">ISO</a
+                    ><a href="sertifikats-site.html#geo">География</a
+                    ><a href="#contact">Контакты</a>
+                </nav>
+                <a href="#contact" class="btn btn-dark nav-cta"
+                    >Оставить заявку</a
+                >
+                <button
+                    class="burger"
+                    aria-label="Меню"
+                    onclick="
+                        document.getElementById('mm').classList.toggle('open')
+                    "
+                >
+                    <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    >
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                </button>
+            </div>
+            <div
+                class="mobile-menu"
+                id="mm"
+                onclick="
+                    if (event.target.tagName === 'A')
+                        this.classList.remove('open');
+                "
+            >
+                <a href="sertifikats-site.html#services">Услуги</a
+                ><a href="sertifikats-site.html#prices">Цены</a
+                ><a href="sertifikats-site.html#docs">Документы</a
+                ><a href="sertifikats-site.html#iso">ISO</a
+                ><a href="sertifikats-site.html#geo">География</a
+                ><a href="#contact">Контакты</a>
+            </div>
+        </header>
+
+        <style>
+            .crumbs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                font-size: 13px;
+                font-weight: 600;
+                opacity: 0.7;
+                margin-bottom: 22px;
+            }
+            .crumbs a:hover {
+                color: var(--gold);
+            }
+            .crumbs span {
+                opacity: 0.6;
+            }
+            .hero-facts {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 28px;
+            }
+            .hero-facts span {
+                display: inline-flex;
+                gap: 8px;
+                align-items: center;
+                padding: 9px 14px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .hero-facts b {
+                color: var(--gold);
+            }
+            .big-stars {
+                font-size: 22px;
+                color: var(--gold);
+                letter-spacing: 4px;
+            }
+            .calc-opts {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                margin: 18px 0 20px;
+            }
+            .calc-opts button {
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                background: transparent;
+                color: var(--on-brand);
+                border-radius: 14px;
+                padding: 12px 10px;
+                font:
+                    600 14px Manrope,
+                    system-ui,
+                    sans-serif;
+                cursor: pointer;
+                transition:
+                    background 0.2s,
+                    border-color 0.2s;
+            }
+            .calc-opts button small {
+                display: block;
+                opacity: 0.6;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            .calc-opts button.on {
+                background: var(--gold);
+                border-color: var(--gold);
+                color: #1a1405;
+            }
+            .calc-opts button.on small {
+                opacity: 0.75;
+            }
+            .calc-res {
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+                border-top: 1px solid rgba(255, 255, 255, 0.12);
+                padding-top: 18px;
+                gap: 12px;
+            }
+            .calc-res .sum {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: clamp(28px, 4vw, 36px);
+                line-height: 1;
+            }
+            .calc-res small {
+                opacity: 0.65;
+                font-size: 13px;
+            }
+            .hero-card .btn {
+                width: 100%;
+                margin-top: 18px;
+            }
+
+            .req-grid {
+                display: grid;
+                gap: 14px;
+                margin-top: 44px;
+            }
+            @media (min-width: 640px) {
+                .req-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (min-width: 1000px) {
+                .req-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            .req {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: var(--r);
+                padding: 22px;
+                display: flex;
+                gap: 16px;
+                align-items: flex-start;
+            }
+            .req .ic {
+                flex: none;
+            }
+            .req b {
+                display: block;
+                font-size: 16px;
+                margin-bottom: 4px;
+            }
+            .req span {
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+
+            .rooms {
+                display: grid;
+                gap: 14px;
+                margin-top: 44px;
+            }
+            @media (min-width: 700px) {
+                .rooms {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (min-width: 1080px) {
+                .rooms {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+            }
+            .room {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: var(--r);
+                padding: 22px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                position: relative;
+                overflow: hidden;
+            }
+            .room .area {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 34px;
+                line-height: 1;
+                color: var(--ink);
+            }
+            .room .area small {
+                font-size: 15px;
+                color: var(--muted);
+                margin-left: 4px;
+            }
+            .room h3 {
+                font-size: 16px;
+            }
+            .room .bar {
+                height: 6px;
+                border-radius: 6px;
+                background: var(--surface-2);
+                overflow: hidden;
+            }
+            .room .bar i {
+                display: block;
+                height: 100%;
+                background: var(--gold);
+                border-radius: 6px;
+            }
+            .room ul {
+                list-style: none;
+                display: grid;
+                gap: 6px;
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            .room li::before {
+                content: "— ";
+                color: var(--gold);
+            }
+            .min-sizes {
+                display: grid;
+                gap: 12px;
+                margin-top: 18px;
+            }
+            @media (min-width: 720px) {
+                .min-sizes {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+            .min-sizes div {
+                border: 1px dashed var(--line);
+                border-radius: 14px;
+                padding: 16px 18px;
+            }
+            .min-sizes b {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 20px;
+                display: block;
+            }
+            .min-sizes span {
+                font-size: 13px;
+                color: var(--muted);
+                font-weight: 600;
+            }
+
+            .bf {
+                display: grid;
+                gap: 28px;
+                margin-top: 40px;
+            }
+            @media (min-width: 900px) {
+                .bf {
+                    grid-template-columns: 0.8fr 1.2fr;
+                    gap: 48px;
+                    align-items: center;
+                }
+            }
+            .bf-hero {
+                background: var(--brand);
+                color: var(--on-brand);
+                border-radius: 24px;
+                padding: 28px;
+            }
+            .bf-hero .n {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 56px;
+                color: var(--gold);
+                line-height: 1;
+            }
+            .bf-hero p {
+                opacity: 0.75;
+                margin-top: 10px;
+                font-size: 15px;
+            }
+            .bf-hero .sm {
+                margin-top: 18px;
+                padding-top: 16px;
+                border-top: 1px solid rgba(255, 255, 255, 0.12);
+                font-size: 14px;
+                opacity: 0.8;
+            }
+            .bf-rows {
+                display: grid;
+                gap: 14px;
+            }
+            .bf-row {
+                display: grid;
+                grid-template-columns: 150px 1fr 34px;
+                gap: 14px;
+                align-items: center;
+                font-weight: 600;
+                font-size: 15px;
+            }
+            @media (max-width: 480px) {
+                .bf-row {
+                    grid-template-columns: 110px 1fr 28px;
+                    font-size: 14px;
+                }
+            }
+            .bf-row .track {
+                display: flex;
+                gap: 4px;
+            }
+            .bf-row .track i {
+                flex: 1;
+                height: 14px;
+                border-radius: 4px;
+                background: var(--surface-2);
+            }
+            .bf-row .track i.f {
+                background: var(--gold);
+            }
+            .bf-row b {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                text-align: right;
+            }
+
+            .check-head {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: end;
+                justify-content: space-between;
+            }
+            .progress {
+                min-width: 260px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 18px;
+                padding: 16px 18px;
+            }
+            .progress .row {
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .progress .row b {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                color: var(--gold);
+            }
+            .progress .pt {
+                height: 8px;
+                border-radius: 8px;
+                background: var(--surface-2);
+                overflow: hidden;
+            }
+            .progress .pt i {
+                display: block;
+                height: 100%;
+                width: 0;
+                background: var(--gold);
+                transition: width 0.3s;
+            }
+            .progress button {
+                margin-top: 10px;
+                background: none;
+                border: 0;
+                color: var(--muted);
+                font:
+                    600 12px Manrope,
+                    system-ui,
+                    sans-serif;
+                cursor: pointer;
+                padding: 0;
+            }
+            .cl {
+                display: none;
+                gap: 10px;
+                margin-top: 6px;
+            }
+            .cl.on {
+                display: grid;
+            }
+            @media (min-width: 800px) {
+                .cl.on {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+            .cl label {
+                display: flex;
+                gap: 14px;
+                align-items: flex-start;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                padding: 14px 16px;
+                cursor: pointer;
+                font-size: 15px;
+                color: var(--ink-2);
+                transition:
+                    border-color 0.2s,
+                    background 0.2s;
+            }
+            .cl label:hover {
+                border-color: var(--gold);
+            }
+            .cl input {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+            }
+            .cl .bx {
+                flex: none;
+                width: 22px;
+                height: 22px;
+                border-radius: 7px;
+                border: 2px solid var(--line);
+                display: grid;
+                place-items: center;
+                margin-top: 1px;
+                transition: all 0.2s;
+                color: transparent;
+            }
+            .cl input:checked + .bx {
+                background: var(--ok);
+                border-color: var(--ok);
+                color: #fff;
+            }
+            .cl input:checked ~ span {
+                color: var(--ink);
+            }
+            .cl input:focus-visible + .bx {
+                outline: 2px solid var(--gold);
+                outline-offset: 2px;
+            }
+            .tabs .cnt {
+                font-size: 12px;
+                opacity: 0.6;
+                margin-left: 4px;
+            }
+
+            .others {
+                display: grid;
+                gap: 10px;
+                margin-top: 36px;
+            }
+            @media (min-width: 720px) {
+                .others {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+            }
+            .others a {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 16px;
+                padding: 18px;
+                display: grid;
+                gap: 6px;
+                transition:
+                    border-color 0.2s,
+                    transform 0.2s;
+            }
+            .others a:hover {
+                border-color: var(--gold);
+                transform: translateY(-2px);
+            }
+            .others .stars {
+                font-size: 15px;
+            }
+            .others b {
+                font-size: 15px;
+            }
+            .others span {
+                font-size: 13px;
+                color: var(--muted);
+                font-weight: 600;
+            }
+        </style>
+
+        <section class="hero" id="top">
+            <div class="wrap">
+                <div>
+                    <nav class="crumbs" aria-label="Навигация">
+                        <a href="sertifikats-site.html">Главная</a><span>/</span
+                        ><a href="sertifikats-site.html#services"
+                            >Классификация гостиниц</a
+                        ><span>/</span>5 звёзд
+                    </nav>
+                    <div class="big-stars" aria-label="5 звёзд">★★★★★</div>
+                    <h1>
+                        Классификация гостиницы <em>на&nbsp;5&nbsp;звёзд</em>
+                    </h1>
+                    <p class="sub">
+                        Высшая категория для отелей с роскошными условиями
+                        проживания, высоким уровнем сервиса и широким набором
+                        дополнительных услуг. Проверим объект на соответствие
+                        требованиям и проведём присвоение категории под ключ.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-gold"
+                            >Заказать классификацию
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.4"
+                                stroke-linecap="round"
+                            >
+                                <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                        ></a>
+                        <a href="#checklist" class="btn btn-ghost"
+                            >Проверить свой отель</a
+                        >
+                    </div>
+                    <div class="hero-facts">
+                        <span>Срок <b>1–4 недели</b></span>
+                        <span>Действует <b>3 года</b></span>
+                        <span>Запись в <b>реестре ФСА</b></span>
+                    </div>
+                </div>
+                <div class="hero-card" id="calc">
+                    <h3>Калькулятор стоимости</h3>
+                    <p class="muted">Сколько номеров в вашей гостинице?</p>
+                    <div class="calc-opts" role="radiogroup">
+                        <button
+                            class="on"
+                            data-p="85000"
+                            data-l="до 15 номеров"
+                        >
+                            до 15<small>номеров</small>
+                        </button>
+                        <button data-p="95000" data-l="15–50 номеров">
+                            15–50<small>номеров</small>
+                        </button>
+                        <button data-p="120000" data-l="51–100 номеров">
+                            51–100<small>номеров</small>
+                        </button>
+                        <button data-p="150000" data-l="от 101 номера">
+                            101+<small>номеров</small>
+                        </button>
+                    </div>
+                    <div class="calc-res">
+                        <div>
+                            <small>Стоимость классификации</small>
+                            <div class="sum" id="sum">85 000 ₽</div>
+                        </div>
+                        <small id="sumL">до 15 номеров</small>
+                    </div>
+                    <a href="#contact" class="btn btn-gold" id="calcCta"
+                        >Заказать по этой цене</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section id="basic">
+            <div class="wrap">
+                <span class="eyebrow reveal">Базовые требования</span>
+                <h2 class="h2 reveal">
+                    Что должно быть в пятизвёздочном отеле
+                </h2>
+                <p class="lead reveal">
+                    Ключевые критерии, по которым гостиница получает категорию
+                    «пять звёзд».
+                </p>
+                <div class="req-grid">
+                    <div class="req reveal">
+                        <span class="ic"
+                            ><svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M3 21V8l9-5 9 5v13" />
+                                <path d="M9 21v-6h6v6" /></svg
+                        ></span>
+                        <div>
+                            <b>Только номера I и высшей категории</b
+                            ><span
+                                >Весь номерной фонд, обязательны многокомнатные
+                                и соединяющиеся номера</span
+                            >
+                        </div>
+                    </div>
+                    <div class="req reveal">
+                        <span class="ic"
+                            ><svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M4 3v8a3 3 0 006 0V3M7 3v18M17 3c-2 2-3 5-3 8h3v10"
+                                /></svg
+                        ></span>
+                        <div>
+                            <b>Ресторан 24/7</b
+                            ><span
+                                >Круглосуточная работа, выбор 2- или 3-разового
+                                питания</span
+                            >
+                        </div>
+                    </div>
+                    <div class="req reveal">
+                        <span class="ic"
+                            ><svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3 2" /></svg
+                        ></span>
+                        <div>
+                            <b>Room service круглосуточно</b
+                            ><span>Заказ в номер в любое время суток</span>
+                        </div>
+                    </div>
+                    <div class="req reveal">
+                        <span class="ic"
+                            ><svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"
+                                /></svg
+                        ></span>
+                        <div>
+                            <b>Фитнес и СПА</b
+                            ><span
+                                >Тренажёрный или фитнес-зал и СПА-услуги — для
+                                объектов от 16 номеров</span
+                            >
+                        </div>
+                    </div>
+                    <div class="req reveal">
+                        <span class="ic"
+                            ><svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="3"
+                                    y="3"
+                                    width="18"
+                                    height="18"
+                                    rx="2"
+                                />
+                                <path d="M9 17V7h4a3 3 0 010 6H9" /></svg
+                        ></span>
+                        <div>
+                            <b>Парковка и световая вывеска</b
+                            ><span
+                                >Плюс наружная архитектурная подсветка
+                                фасада</span
+                            >
+                        </div>
+                    </div>
+                    <div class="req reveal">
+                        <span class="ic"
+                            ><svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M3 6h18M3 12h18M3 18h12" /></svg
+                        ></span>
+                        <div>
+                            <b>Завтрак «шведский стол»</b
+                            ><span>Не менее 3 часов со свободным доступом</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rooms" style="background: var(--surface-2)">
+            <div class="wrap">
+                <span class="eyebrow reveal">Номерной фонд</span>
+                <h2 class="h2 reveal">Номера высшей категории</h2>
+                <p class="lead reveal">
+                    Минимальная площадь и обязательные характеристики для
+                    каждого типа номера.
+                </p>
+                <div class="rooms">
+                    <article class="room reveal">
+                        <div class="area">75<small>м²</small></div>
+                        <div class="bar"><i style="width: 100%"></i></div>
+                        <h3>Сюит</h3>
+                        <ul>
+                            <li>
+                                3 и более жилых комнаты: гостиная или столовая,
+                                кабинет, спальня
+                            </li>
+                            <li>Кровать от 200×200 см</li>
+                            <li>Дополнительный гостевой туалет</li>
+                        </ul>
+                    </article>
+                    <article class="room reveal">
+                        <div class="area">40<small>м²</small></div>
+                        <div class="bar"><i style="width: 53%"></i></div>
+                        <h3>Апартамент</h3>
+                        <ul>
+                            <li>
+                                2 и более комнаты: гостиная или столовая,
+                                спальня
+                            </li>
+                            <li>Кровать от 180×200 см</li>
+                            <li>Мини-кухня</li>
+                        </ul>
+                    </article>
+                    <article class="room reveal">
+                        <div class="area">35<small>м²</small></div>
+                        <div class="bar"><i style="width: 47%"></i></div>
+                        <h3>Люкс</h3>
+                        <ul>
+                            <li>2 жилые комнаты: гостиная и спальня</li>
+                            <li>2 основных спальных места</li>
+                        </ul>
+                    </article>
+                    <article class="room reveal">
+                        <div class="area">25<small>м²</small></div>
+                        <div class="bar"><i style="width: 33%"></i></div>
+                        <h3>Джуниор сюит</h3>
+                        <ul>
+                            <li>Однокомнатный, для 1–2 гостей</li>
+                            <li>Зона гостиной, столовой или кабинета</li>
+                        </ul>
+                    </article>
+                    <article class="room reveal">
+                        <div class="area">25<small>м²</small></div>
+                        <div class="bar"><i style="width: 33%"></i></div>
+                        <h3>Студия</h3>
+                        <ul>
+                            <li>Однокомнатный, для 1–2 гостей</li>
+                            <li>Мини-кухня</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="min-sizes">
+                    <div class="reveal">
+                        <span>Одноместный номер</span><b>от 14 м²</b>
+                    </div>
+                    <div class="reveal">
+                        <span>Двухместный номер</span><b>от 16 м²</b>
+                    </div>
+                    <div class="reveal">
+                        <span>Полный санузел</span><b>от 3,8 м²</b>
+                    </div>
+                    <div class="reveal">
+                        <span>Рабочая поверхность стола</span><b>от 0,5 м²</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="breakfast">
+            <div class="wrap">
+                <span class="eyebrow reveal">Питание</span>
+                <h2 class="h2 reveal">Требования к завтраку</h2>
+                <div class="bf">
+                    <div class="bf-hero reveal">
+                        <div class="n">3 часа</div>
+                        <p>
+                            минимальная продолжительность завтрака «шведский
+                            стол» со свободным доступом
+                        </p>
+                        <div class="sm">
+                            В отелях с 15 номерами и менее допускается
+                            обслуживание «по меню».
+                        </div>
+                    </div>
+                    <div class="bf-rows reveal" id="bfRows"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist" style="background: var(--surface-2)">
+            <div class="wrap">
+                <div class="check-head">
+                    <div>
+                        <span class="eyebrow reveal">Самопроверка</span>
+                        <h2 class="h2 reveal">
+                            Чек-лист соответствия 5 звёздам
+                        </h2>
+                        <p class="lead reveal">
+                            Отметьте, что уже есть в вашем отеле. Отметки
+                            сохраняются только в вашем браузере.
+                        </p>
+                    </div>
+                    <div class="progress reveal">
+                        <div class="row">
+                            <span>Выполнено</span><b id="pc">0 / 0</b>
+                        </div>
+                        <div class="pt"><i id="pb"></i></div>
+                        <button id="reset" type="button">
+                            Сбросить отметки
+                        </button>
+                    </div>
+                </div>
+                <div class="tabs reveal" role="tablist" id="clTabs"></div>
+                <div id="clWrap"></div>
+                <p class="note reveal">
+                    Не уверены, что объект проходит? Пришлите фото и описание —
+                    бесплатно оценим шансы и подскажем, что доработать.
+                </p>
+            </div>
+        </section>
+
+        <section id="prices">
+            <div class="wrap">
+                <span class="eyebrow reveal">Цены</span>
+                <h2 class="h2 reveal">Стоимость классификации на 5 звёзд</h2>
+                <p class="lead reveal">
+                    Цена зависит от размера номерного фонда.
+                </p>
+                <div class="ptable reveal">
+                    <div class="prow">
+                        <div class="stars-cell">
+                            <span class="chip">S</span>
+                        </div>
+                        <div class="name">
+                            До 15 номеров<small
+                                >Бутик-отели и мини-гостиницы</small
+                            >
+                        </div>
+                        <div class="val"><span>от</span>85 000 ₽</div>
+                    </div>
+                    <div class="prow">
+                        <div class="stars-cell">
+                            <span class="chip">M</span>
+                        </div>
+                        <div class="name">15–50 номеров</div>
+                        <div class="val"><span>от</span>95 000 ₽</div>
+                    </div>
+                    <div class="prow">
+                        <div class="stars-cell">
+                            <span class="chip">L</span>
+                        </div>
+                        <div class="name">51–100 номеров</div>
+                        <div class="val"><span>от</span>120 000 ₽</div>
+                    </div>
+                    <div class="prow">
+                        <div class="stars-cell">
+                            <span class="chip">XL</span>
+                        </div>
+                        <div class="name">От 101 номера</div>
+                        <div class="val"><span>от</span>150 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dark-sec" id="docs">
+            <div class="wrap">
+                <span class="eyebrow reveal">Как проходит</span>
+                <h2 class="h2 reveal">От заявки до записи в реестре</h2>
+                <p class="lead reveal">
+                    Присвоение звёздной категории проводится после регистрации
+                    объекта в реестре классифицированных средств размещения.
+                    Если записи ещё нет — оформим её тоже.
+                </p>
+                <div class="steps">
+                    <div class="step reveal">
+                        <b>Заявка и консультация</b
+                        ><span
+                            >Бесплатно оценим объект и зафиксируем
+                            стоимость</span
+                        >
+                    </div>
+                    <div class="step reveal">
+                        <b>Документы</b
+                        ><span
+                            >Выписка из ЕГРН или договор аренды, выписка из
+                            реестра КСР, сведения об объекте</span
+                        >
+                    </div>
+                    <div class="step reveal">
+                        <b>Оценка соответствия</b
+                        ><span
+                            >Проверка объекта по требованиям категории «пять
+                            звёзд»</span
+                        >
+                    </div>
+                    <div class="step reveal">
+                        <b>Категория в реестре</b
+                        ><span
+                            >Информация публикуется в реестре ФСА, категория
+                            действует 3 года</span
+                        >
+                    </div>
+                </div>
+                <p class="note reveal" style="color: rgba(246, 243, 236, 0.7)">
+                    Классификация регулируется Постановлениями Правительства РФ
+                    от 27.12.2024 № 1951 и № 1952. Проверить запись можно в
+                    <a
+                        href="https://tourism.fsa.gov.ru/ru/main"
+                        target="_blank"
+                        rel="noopener"
+                        style="color: var(--gold)"
+                        >реестре ФСА</a
+                    >.
+                </p>
+            </div>
+        </section>
+
+        <section id="other">
+            <div class="wrap">
+                <span class="eyebrow reveal">Другие категории</span>
+                <h2 class="h2 reveal">Подбираете другую категорию?</h2>
+                <div class="others">
+                    <a class="reveal" href="sertifikats-site.html#prices"
+                        ><span class="stars"
+                            >★★★★<span class="off">★</span></span
+                        ><b>4 звезды</b><span>от 60 000 ₽</span></a
+                    >
+                    <a class="reveal" href="sertifikats-site.html#prices"
+                        ><span class="stars"
+                            >★★★<span class="off">★★</span></span
+                        ><b>3 звезды</b><span>от 40 000 ₽</span></a
+                    >
+                    <a class="reveal" href="sertifikats-site.html#prices"
+                        ><span class="stars"
+                            >★★<span class="off">★★★</span></span
+                        ><b>2 звезды</b><span>от 30 000 ₽</span></a
+                    >
+                    <a class="reveal" href="sertifikats-site.html#prices"
+                        ><span class="stars"
+                            >★<span class="off">★★★★</span></span
+                        ><b>1 звезда</b><span>от 20 000 ₽</span></a
+                    >
+                    <a class="reveal" href="sertifikats-site.html#services"
+                        ><span class="stars"
+                            ><span class="off">★★★★★</span></span
+                        ><b>Без звёзд</b><span>от 20 000 ₽</span></a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="background: var(--surface-2)">
+            <div class="wrap contact">
+                <div>
+                    <span class="eyebrow reveal">Заказать</span>
+                    <h2 class="h2 reveal">
+                        Бесплатная консультация по 5 звёздам
+                    </h2>
+                    <p class="lead reveal">
+                        Расскажите об объекте — оценим соответствие требованиям
+                        и назовём точную стоимость.
+                    </p>
+                    <div class="c-list">
+                        <a class="c-item reveal" href="tel:+79920100537"
+                            ><span class="ic"
+                                ><svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"
+                                    /></svg></span
+                            ><span
+                                ><small>Телефон</small
+                                ><b>+7 (992) 010-05-37</b></span
+                            ></a
+                        >
+                        <a
+                            class="c-item reveal"
+                            href="https://t.me/Olga36541"
+                            target="_blank"
+                            rel="noopener"
+                            ><span class="ic"
+                                ><svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M22 2L11 13M22 2l-7 20-4-9-9-4z"
+                                    /></svg></span
+                            ><span
+                                ><small>Telegram</small
+                                ><b>+7 (992) 010-05-37</b></span
+                            ></a
+                        >
+                        <a
+                            class="c-item reveal"
+                            href="mailto:info@sertifikats.ru"
+                            ><span class="ic"
+                                ><svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect
+                                        x="2"
+                                        y="4"
+                                        width="20"
+                                        height="16"
+                                        rx="2"
+                                    />
+                                    <path d="M22 7l-10 6L2 7" /></svg></span
+                            ><span
+                                ><small>Email</small
+                                ><b>info@sertifikats.ru</b></span
+                            ></a
+                        >
+                    </div>
+                </div>
+                <form class="f reveal" id="form" novalidate>
+                    <label
+                        >Имя<input
+                            name="name"
+                            placeholder="Как к вам обращаться"
+                    /></label>
+                    <label
+                        >Телефон *<input
+                            name="phone"
+                            type="tel"
+                            required
+                            placeholder="+7 (___) ___-__-__"
+                    /></label>
+                    <label
+                        >Email<input
+                            name="email"
+                            type="email"
+                            placeholder="you@company.ru"
+                    /></label>
+                    <label
+                        >Город<input name="city" placeholder="Например, Сочи"
+                    /></label>
+                    <label class="full"
+                        >Количество номеров
+                        <select name="rooms" id="roomsSel">
+                            <option>до 15 номеров</option>
+                            <option>15–50 номеров</option>
+                            <option>51–100 номеров</option>
+                            <option>от 101 номера</option>
+                        </select>
+                    </label>
+                    <label class="full"
+                        >Сообщение<textarea
+                            name="msg"
+                            placeholder="Название отеля, типы номеров, есть ли запись в реестре КСР"
+                        ></textarea>
+                    </label>
+                    <div class="full">
+                        <label style="margin-bottom: 8px"
+                            >Предпочтительный способ связи</label
+                        >
+                        <div class="seg">
+                            <label
+                                ><input
+                                    type="radio"
+                                    name="via"
+                                    value="Телефон"
+                                    checked
+                                /><span>Телефон</span></label
+                            >
+                            <label
+                                ><input
+                                    type="radio"
+                                    name="via"
+                                    value="Telegram"
+                                /><span>Telegram</span></label
+                            >
+                            <label
+                                ><input
+                                    type="radio"
+                                    name="via"
+                                    value="Email"
+                                /><span>Email</span></label
+                            >
+                        </div>
+                    </div>
+                    <div class="full">
+                        <button class="btn btn-gold" type="submit">
+                            Отправить запрос
+                        </button>
+                    </div>
+                    <p class="consent full">
+                        Нажимая «Отправить», я подтверждаю согласие на обработку
+                        персональных данных в соответствии с Политикой
+                        конфиденциальности.
+                    </p>
+                    <div class="ok-msg full" id="ok"></div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="wrap">
+                <div class="f-grid">
+                    <div>
+                        <a
+                            href="sertifikats-site.html"
+                            class="logo"
+                            style="color: inherit"
+                            ><span class="logo-mark"
+                                ><svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"
+                                    /></svg></span
+                            ><span>Центр сертификации Промо</span></a
+                        >
+                        <p
+                            style="
+                                opacity: 0.6;
+                                margin-top: 14px;
+                                font-size: 14px;
+                                max-width: 340px;
+                            "
+                        >
+                            Классификация средств размещения, сертификация ISO,
+                            паспорта безопасности и обучение персонала по всей
+                            России.
+                        </p>
+                    </div>
+                    <div>
+                        <h5>Услуги</h5>
+                        <div class="links">
+                            <a href="sertifikats-site.html#services"
+                                >Регистрация в реестре КСР</a
+                            ><a href="sertifikats-site.html#prices"
+                                >Классификация на звёзды</a
+                            ><a href="sertifikats-site.html#iso"
+                                >Сертификация ISO</a
+                            ><a href="sertifikats-site.html#services"
+                                >Паспорт безопасности</a
+                            ><a href="sertifikats-site.html#services"
+                                >УПК и переподготовка</a
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Связь</h5>
+                        <div class="links">
+                            <a href="tel:+79920100537">+7 (992) 010-05-37</a
+                            ><a href="mailto:info@sertifikats.ru"
+                                >info@sertifikats.ru</a
+                            ><a
+                                href="https://t.me/Olga36541"
+                                target="_blank"
+                                rel="noopener"
+                                >Telegram</a
+                            ><a
+                                href="https://vk.com/promoural"
+                                target="_blank"
+                                rel="noopener"
+                                >ВКонтакте</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="copy">
+                    <span
+                        >© 2004–2026 Центр сертификации Промо. Все права
+                        защищены.</span
+                    ><button class="theme-t" id="tt">Сменить тему</button>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // calculator
+            const fmt = (n) =>
+                n.toLocaleString("ru-RU").replace(/,/g, " ") + " ₽";
+            const opts = document.querySelectorAll(".calc-opts button"),
+                sel = document.getElementById("roomsSel");
+            opts.forEach(
+                (b, i) =>
+                    (b.onclick = () => {
+                        opts.forEach((x) => x.classList.toggle("on", x === b));
+                        document.getElementById("sum").textContent = fmt(
+                            +b.dataset.p,
+                        );
+                        document.getElementById("sumL").textContent =
+                            b.dataset.l;
+                        sel.selectedIndex = i;
+                    }),
+            );
+            sel.onchange = () => opts[sel.selectedIndex].click();
+
+            // breakfast
+            const BF = [
+                ["Выпечка и хлеб", 10],
+                ["Холодные закуски", 5],
+                ["Горячие блюда", 5],
+                ["Напитки", 5],
+                ["Фрукты", 5],
+                ["Молочная продукция", 3],
+            ];
+            document.getElementById("bfRows").innerHTML = BF.map(
+                ([n, c]) =>
+                    `<div class="bf-row"><span>${n}</span><span class="track">${Array.from({ length: 10 }, (_, i) => `<i class="${i < c ? "f" : ""}"></i>`).join("")}</span><b>${c}</b></div>`,
+            ).join("");
+
+            // checklist
+            const CL = {
+                "Общественные зоны": [
+                    "Наружная архитектурная подсветка здания и фасада",
+                    "Кондиционирование в номерах и общественных помещениях",
+                    "Индивидуальная регулировка температуры (отопление / охлаждение)",
+                    "Лифт в здании выше 2 этажей",
+                    "Декоративное озеленение и художественные композиции в холле",
+                    "Сейфовые ячейки для ценностей гостей",
+                    "Гардероб рядом с общественными помещениями",
+                    "Конференц-зал с оборудованием для презентаций и звуком",
+                    "Бизнес-центр: связь, копировальная техника, переговорные, компьютеры",
+                    "Тренажёрный или фитнес-зал и СПА-услуги",
+                    "Общие санузлы: покрытия для унитаза, крем для рук, махровые салфетки, гигиенические пакеты",
+                ],
+                Номер: [
+                    "Мини-бар (мини-холодильник)",
+                    "Мини-сейф",
+                    "Кресла — не менее одного на гостя (в двухместном допустимы диван + кресло)",
+                    "Письменный стол с рабочей поверхностью от 0,5 м²",
+                    "Журнальный столик",
+                    "Компьютер, ноутбук или планшет с интернетом по просьбе гостя",
+                    "Прикроватный светильник у каждого спального места с выключателем у изголовья",
+                    "Настольная лампа и светильник над умывальником",
+                    "Дистанционный выключатель основного света у изголовья и выключатель у входа",
+                    "Естественное освещение через окна",
+                ],
+                Санузел: [
+                    "Зеркало с подсветкой более 0,42 м² или зеркальная стенка",
+                    "Косметическое зеркало для бритья и макияжа",
+                    "Полка для туалетных принадлежностей или туалетный стол",
+                    "Поручень на ванне или рядом с ней",
+                    "Кнопка вызова персонала",
+                    "Косметические салфетки в диспенсере",
+                    "Многослойная туалетная бумага с резервным рулоном и держателями",
+                    "Гигиенические пакеты в диспенсере",
+                ],
+                Услуги: [
+                    "Круглосуточный ресторан, 2- или 3-разовое питание",
+                    "Круглосуточный заказ в номер",
+                    "Завтрак «шведский стол» не менее 3 часов",
+                    "Вечерняя подготовка номера",
+                    "Смена белья раз в 2 дня, по просьбе — ежедневно",
+                    "Встреча и проводы гостей, доставка гостей и багажа",
+                    "Экскурсии, гиды и гиды-переводчики",
+                ],
+            };
+            let st = {};
+            try {
+                st = JSON.parse(localStorage.getItem("cl5") || "{}");
+            } catch (e) {}
+            const save = () => {
+                try {
+                    localStorage.setItem("cl5", JSON.stringify(st));
+                } catch (e) {}
+            };
+            const tabs = document.getElementById("clTabs"),
+                wrap = document.getElementById("clWrap");
+            const keys = Object.keys(CL);
+            tabs.innerHTML = keys
+                .map(
+                    (k, i) =>
+                        `<button type="button" class="${i ? "" : "on"}" data-i="${i}">${k}<span class="cnt" id="c${i}"></span></button>`,
+                )
+                .join("");
+            wrap.innerHTML = keys
+                .map(
+                    (k, i) =>
+                        `<div class="cl${i ? "" : " on"}" id="cl${i}">${CL[k]
+                            .map((t, j) => {
+                                const id = i + "_" + j;
+                                return `<label><input type="checkbox" data-id="${id}"${st[id] ? " checked" : ""}><span class="bx"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>${t}</span></label>`;
+                            })
+                            .join("")}</div>`,
+                )
+                .join("");
+            const total = keys.reduce((a, k) => a + CL[k].length, 0);
+            function upd() {
+                let d = 0;
+                keys.forEach((k, i) => {
+                    const n = CL[k].filter((_, j) => st[i + "_" + j]).length;
+                    d += n;
+                    document.getElementById("c" + i).textContent =
+                        n + "/" + CL[k].length;
+                });
+                document.getElementById("pc").textContent = d + " / " + total;
+                document.getElementById("pb").style.width =
+                    (d / total) * 100 + "%";
+            }
+            wrap.addEventListener("change", (e) => {
+                const id = e.target.dataset.id;
+                if (!id) return;
+                if (e.target.checked) st[id] = 1;
+                else delete st[id];
+                save();
+                upd();
+            });
+            tabs.addEventListener("click", (e) => {
+                const b = e.target.closest("button");
+                if (!b) return;
+                tabs.querySelectorAll("button").forEach((x) =>
+                    x.classList.toggle("on", x === b),
+                );
+                wrap.querySelectorAll(".cl").forEach((x, i) =>
+                    x.classList.toggle("on", i == b.dataset.i),
+                );
+            });
+            document.getElementById("reset").onclick = () => {
+                st = {};
+                save();
+                wrap.querySelectorAll("input").forEach(
+                    (x) => (x.checked = false),
+                );
+                upd();
+            };
+            upd();
+
+            // form
+            document.getElementById("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+                const f = e.target,
+                    ok = document.getElementById("ok");
+                if (!f.phone.value.trim()) {
+                    ok.style.display = "block";
+                    ok.textContent = "Пожалуйста, укажите телефон.";
+                    return;
+                }
+                let done = 0;
+                try {
+                    done = Object.keys(st).length;
+                } catch (_) {}
+                const body = `Услуга: Классификация гостиницы на 5 звёзд\nИмя: ${f.name.value}\nТелефон: ${f.phone.value}\nEmail: ${f.email.value}\nГород: ${f.city.value}\nНомеров: ${f.rooms.value}\nЧек-лист: ${done} из ${total}\nСпособ связи: ${f.via.value}\n\n${f.msg.value}`;
+                window.location.href = `mailto:info@sertifikats.ru?subject=${encodeURIComponent("Запрос с сайта: классификация на 5 звёзд")}&body=${encodeURIComponent(body)}`;
+                ok.style.display = "block";
+                ok.textContent =
+                    "Спасибо! Открываем почтовый клиент с готовым письмом — осталось нажать «Отправить».";
+            });
+
+            // theme + reveal
+            const tt = document.getElementById("tt"),
+                root = document.documentElement;
+            try {
+                const s = localStorage.getItem("theme");
+                if (s) root.dataset.theme = s;
+            } catch (e) {}
+            tt.onclick = () => {
+                const dark = root.dataset.theme
+                    ? root.dataset.theme === "dark"
+                    : matchMedia("(prefers-color-scheme: dark)").matches;
+                root.dataset.theme = dark ? "light" : "dark";
+                try {
+                    localStorage.setItem("theme", root.dataset.theme);
+                } catch (e) {}
+            };
+            const io = new IntersectionObserver(
+                (es) =>
+                    es.forEach((x) => {
+                        if (x.isIntersecting) {
+                            x.target.classList.add("in");
+                            io.unobserve(x.target);
+                        }
+                    }),
+                { threshold: 0.12 },
+            );
+            document
+                .querySelectorAll(".reveal")
+                .forEach((el) => io.observe(el));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,4088 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Центр сертификации Промо</title>
+        <meta
+            name="description"
+            content="Классификация гостиниц и баз отдыха, регистрация в реестре ФСА, паспорт безопасности, сертификация ISO, повышение квалификации — по всей России."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --bg: #f6f3ec;
+                --surface: #ffffff;
+                --surface-2: #efe9dc;
+                --ink: #14182b;
+                --ink-2: #4a4f63;
+                --muted: #7c8093;
+                --line: #e2dccd;
+                --brand: #1c2550;
+                --brand-2: #2c3a7a;
+                --gold: #c99a2e;
+                --gold-soft: #f4e6c2;
+                --ok: #2f8f5b;
+                --on-brand: #f6f3ec;
+                --shadow:
+                    0 1px 2px rgba(20, 24, 43, 0.05),
+                    0 12px 32px -12px rgba(20, 24, 43, 0.18);
+                --r: 18px;
+            }
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) {
+                    --bg: #0e1120;
+                    --surface: #161a2e;
+                    --surface-2: #1d2240;
+                    --ink: #eef0f7;
+                    --ink-2: #b7bbcf;
+                    --muted: #878ca6;
+                    --line: #272d4d;
+                    --brand: #232c5e;
+                    --brand-2: #3a4aa0;
+                    --gold: #e0b24a;
+                    --gold-soft: #3a3220;
+                    --on-brand: #f6f3ec;
+                    --shadow:
+                        0 1px 2px rgba(0, 0, 0, 0.3),
+                        0 12px 32px -12px rgba(0, 0, 0, 0.6);
+                }
+            }
+            :root[data-theme="dark"] {
+                --bg: #0e1120;
+                --surface: #161a2e;
+                --surface-2: #1d2240;
+                --ink: #eef0f7;
+                --ink-2: #b7bbcf;
+                --muted: #878ca6;
+                --line: #272d4d;
+                --brand: #232c5e;
+                --brand-2: #3a4aa0;
+                --gold: #e0b24a;
+                --gold-soft: #3a3220;
+                --on-brand: #f6f3ec;
+                --shadow:
+                    0 1px 2px rgba(0, 0, 0, 0.3),
+                    0 12px 32px -12px rgba(0, 0, 0, 0.6);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                background: var(--bg);
+                color: var(--ink);
+                font:
+                    400 16px/1.6 Manrope,
+                    system-ui,
+                    sans-serif;
+                -webkit-font-smoothing: antialiased;
+                overflow-x: hidden;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            h1,
+            h2,
+            h3 {
+                font-family: Unbounded, Manrope, sans-serif;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+                line-height: 1.15;
+            }
+            .wrap {
+                max-width: 1180px;
+                margin: 0 auto;
+                padding: 0 16px;
+            }
+            @media (min-width: 720px) {
+                .wrap {
+                    padding: 0 28px;
+                }
+            }
+            section {
+                padding: 72px 0;
+            }
+            @media (min-width: 900px) {
+                section {
+                    padding: 104px 0;
+                }
+            }
+            .eyebrow {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: var(--gold);
+            }
+            .eyebrow::before {
+                content: "";
+                width: 22px;
+                height: 2px;
+                background: var(--gold);
+            }
+            .h2 {
+                font-size: clamp(28px, 4vw, 44px);
+                margin: 14px 0 16px;
+            }
+            .lead {
+                color: var(--ink-2);
+                font-size: 17px;
+                max-width: 680px;
+            }
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 14px 22px;
+                border-radius: 999px;
+                font-weight: 700;
+                font-size: 15px;
+                border: 0;
+                cursor: pointer;
+                transition:
+                    transform 0.15s,
+                    background 0.2s,
+                    box-shadow 0.2s;
+                font-family: inherit;
+            }
+            .btn:hover {
+                transform: translateY(-1px);
+            }
+            .btn-gold {
+                background: var(--gold);
+                color: #1a1405;
+                box-shadow: 0 8px 24px -10px var(--gold);
+            }
+            .btn-ghost {
+                background: transparent;
+                color: var(--on-brand);
+                border: 1.5px solid rgba(246, 243, 236, 0.35);
+            }
+            .btn-ghost:hover {
+                border-color: var(--on-brand);
+            }
+            .btn-dark {
+                background: var(--brand);
+                color: var(--on-brand);
+            }
+
+            /* topbar */
+            .topbar {
+                background: var(--brand);
+                color: var(--on-brand);
+                font-size: 13px;
+            }
+            .topbar .wrap {
+                display: flex;
+                gap: 18px;
+                align-items: center;
+                justify-content: space-between;
+                height: 38px;
+            }
+            .topbar .tb-left {
+                display: none;
+                gap: 18px;
+                opacity: 0.85;
+                white-space: nowrap;
+            }
+            @media (min-width: 720px) {
+                .topbar .tb-left {
+                    display: flex;
+                }
+            }
+            .topbar .tb-left span:nth-child(2) {
+                display: none;
+            }
+            @media (min-width: 720px) {
+                .topbar .tb-left span:nth-child(2) {
+                    display: inline;
+                }
+            }
+            .topbar .tb-right {
+                display: flex;
+                gap: 14px;
+                white-space: nowrap;
+                margin-left: auto;
+            }
+            .topbar .tb-right a {
+                opacity: 0.85;
+            }
+            .topbar .tb-right a:hover {
+                opacity: 1;
+                color: var(--gold);
+            }
+
+            /* header */
+            header.nav {
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                background: color-mix(in srgb, var(--bg) 85%, transparent);
+                backdrop-filter: blur(14px);
+                border-bottom: 1px solid var(--line);
+            }
+            .nav .wrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 70px;
+                gap: 16px;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-weight: 700;
+                font-size: 17px;
+            }
+            .logo-mark {
+                width: 38px;
+                height: 38px;
+                border-radius: 11px;
+                background: var(--brand);
+                display: grid;
+                place-items: center;
+                color: var(--gold);
+            }
+            .logo small {
+                display: block;
+                font-family: Manrope, system-ui, sans-serif;
+                font-weight: 600;
+                font-size: 11px;
+                color: var(--muted);
+                letter-spacing: 0.04em;
+            }
+            .menu {
+                display: none;
+                gap: 26px;
+                font-weight: 600;
+                font-size: 15px;
+                color: var(--ink-2);
+            }
+            .menu a:hover {
+                color: var(--ink);
+            }
+            .nav-cta {
+                display: none;
+            }
+            @media (min-width: 980px) {
+                .menu {
+                    display: flex;
+                }
+                .nav-cta {
+                    display: inline-flex;
+                }
+                .burger {
+                    display: none !important;
+                }
+            }
+            .burger {
+                display: grid;
+                place-items: center;
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+                border: 1px solid var(--line);
+                background: var(--surface);
+                cursor: pointer;
+                color: var(--ink);
+            }
+            .mobile-menu {
+                display: none;
+                border-top: 1px solid var(--line);
+                padding: 12px 16px 20px;
+                background: var(--bg);
+            }
+            .mobile-menu.open {
+                display: grid;
+                gap: 4px;
+            }
+            .mobile-menu a {
+                padding: 12px 4px;
+                font-weight: 600;
+                border-bottom: 1px solid var(--line);
+            }
+
+            /* hero */
+            .hero {
+                position: relative;
+                background: var(--brand);
+                color: var(--on-brand);
+                padding: 64px 0 88px;
+                overflow: hidden;
+            }
+            .hero::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background:
+                    radial-gradient(
+                        600px 400px at 85% 10%,
+                        rgba(201, 154, 46, 0.28),
+                        transparent 60%
+                    ),
+                    radial-gradient(
+                        500px 360px at 0% 100%,
+                        rgba(90, 110, 220, 0.35),
+                        transparent 60%
+                    );
+            }
+            .hero::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image:
+                    linear-gradient(
+                        rgba(255, 255, 255, 0.05) 1px,
+                        transparent 1px
+                    ),
+                    linear-gradient(
+                        90deg,
+                        rgba(255, 255, 255, 0.05) 1px,
+                        transparent 1px
+                    );
+                background-size: 48px 48px;
+                mask-image: linear-gradient(180deg, #000, transparent 85%);
+            }
+            .hero .wrap {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                gap: 48px;
+            }
+            @media (min-width: 980px) {
+                .hero {
+                    padding: 96px 0 120px;
+                }
+                .hero .wrap {
+                    grid-template-columns: 1.25fr 0.9fr;
+                    align-items: center;
+                }
+            }
+            .pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 7px 14px 7px 8px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .pill b {
+                white-space: nowrap;
+                flex: none;
+                background: var(--gold);
+                color: #1a1405;
+                border-radius: 999px;
+                padding: 2px 9px;
+                font-size: 12px;
+            }
+            .hero h1 {
+                font-size: clamp(32px, 5.4vw, 60px);
+                margin: 22px 0 20px;
+            }
+            .hero h1 em {
+                font-style: normal;
+                color: var(--gold);
+            }
+            .hero p.sub {
+                font-size: 18px;
+                opacity: 0.82;
+                max-width: 560px;
+            }
+            .hero-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 32px;
+            }
+            .hero-stats {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+                margin-top: 44px;
+                max-width: 560px;
+            }
+            .hero-stats div {
+                border-left: 2px solid var(--gold);
+                padding-left: 12px;
+            }
+            .hero-stats strong {
+                display: block;
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: clamp(20px, 3vw, 28px);
+            }
+            .hero-stats span {
+                font-size: 13px;
+                opacity: 0.7;
+            }
+            .hero-card {
+                background: rgba(255, 255, 255, 0.06);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                border-radius: 24px;
+                padding: 26px;
+                backdrop-filter: blur(8px);
+            }
+            .hero-card h3 {
+                font-size: 16px;
+                margin-bottom: 6px;
+            }
+            .hero-card .muted {
+                opacity: 0.7;
+                font-size: 14px;
+                margin-bottom: 18px;
+            }
+            .star-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 13px 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .stars {
+                color: var(--gold);
+                letter-spacing: 2px;
+                font-size: 15px;
+            }
+            .stars .off {
+                opacity: 0.22;
+            }
+            .star-row .price {
+                font-weight: 800;
+            }
+
+            /* services */
+            .grid-3 {
+                display: grid;
+                gap: 18px;
+                margin-top: 44px;
+            }
+            @media (min-width: 700px) {
+                .grid-3 {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (min-width: 1040px) {
+                .grid-3 {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            .card {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: var(--r);
+                padding: 26px;
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                box-shadow: var(--shadow);
+                transition:
+                    transform 0.2s,
+                    border-color 0.2s;
+            }
+            .card:hover {
+                transform: translateY(-3px);
+                border-color: var(--gold);
+            }
+            .ic {
+                width: 48px;
+                height: 48px;
+                border-radius: 14px;
+                background: var(--gold-soft);
+                color: var(--gold);
+                display: grid;
+                place-items: center;
+            }
+            .card h3 {
+                font-size: 18px;
+            }
+            .card p {
+                color: var(--ink-2);
+                font-size: 15px;
+                flex: 1;
+            }
+            .meta {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                border-top: 1px dashed var(--line);
+                padding-top: 14px;
+                margin-top: 4px;
+            }
+            .chip {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 13px;
+                font-weight: 600;
+                padding: 6px 11px;
+                border-radius: 999px;
+                background: var(--surface-2);
+                color: var(--ink-2);
+            }
+            .chip.price {
+                background: var(--brand);
+                color: var(--on-brand);
+            }
+            .card.featured {
+                background: var(--brand);
+                color: var(--on-brand);
+                border-color: var(--brand);
+            }
+            .card.featured p {
+                color: rgba(246, 243, 236, 0.75);
+            }
+            .card.featured .chip {
+                background: rgba(255, 255, 255, 0.1);
+                color: var(--on-brand);
+            }
+            .card.featured .chip.price {
+                background: var(--gold);
+                color: #1a1405;
+            }
+            .card.featured .ic {
+                background: rgba(201, 154, 46, 0.2);
+            }
+            .tag {
+                align-self: flex-start;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: var(--gold);
+            }
+
+            /* alert band */
+            .band {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 28px;
+                padding: 32px;
+                display: grid;
+                gap: 28px;
+                box-shadow: var(--shadow);
+            }
+            @media (min-width: 900px) {
+                .band {
+                    grid-template-columns: 1fr 1.1fr;
+                    padding: 48px;
+                    gap: 48px;
+                }
+            }
+            .band h2 {
+                font-size: clamp(24px, 3vw, 34px);
+                margin: 12px 0;
+            }
+            .ul-check {
+                list-style: none;
+                display: grid;
+                gap: 14px;
+            }
+            .ul-check li {
+                display: flex;
+                gap: 12px;
+                color: var(--ink-2);
+            }
+            .ul-check li svg {
+                flex: none;
+                margin-top: 3px;
+                color: var(--ok);
+            }
+            .fine {
+                margin-top: 20px;
+                display: flex;
+                gap: 14px;
+                align-items: center;
+                padding: 16px 18px;
+                border-radius: 14px;
+                background: var(--gold-soft);
+                font-weight: 600;
+                font-size: 14px;
+            }
+            .fine strong {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 22px;
+                color: var(--gold);
+                white-space: nowrap;
+            }
+            .law {
+                font-size: 13px;
+                color: var(--muted);
+                margin-top: 18px;
+            }
+
+            /* tabs / docs */
+            .tabs {
+                display: inline-flex;
+                background: var(--surface-2);
+                border-radius: 999px;
+                padding: 5px;
+                margin: 32px 0 22px;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+            .tabs button {
+                border: 0;
+                background: transparent;
+                font: 600 14px Manrope;
+                color: var(--ink-2);
+                padding: 10px 18px;
+                border-radius: 999px;
+                cursor: pointer;
+            }
+            .tabs button.on {
+                background: var(--surface);
+                color: var(--ink);
+                box-shadow: var(--shadow);
+            }
+            .docs {
+                display: none;
+                gap: 14px;
+            }
+            .docs.on {
+                display: grid;
+            }
+            @media (min-width: 800px) {
+                .docs.on {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            .doc {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: var(--r);
+                padding: 22px;
+                position: relative;
+            }
+            .doc .n {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 30px;
+                color: var(--gold);
+                opacity: 0.9;
+                line-height: 1;
+            }
+            .doc h4 {
+                font-size: 16px;
+                margin: 12px 0 6px;
+            }
+            .doc p {
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            .note {
+                margin-top: 16px;
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            .note a {
+                color: var(--brand-2);
+                font-weight: 700;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+            :root[data-theme="dark"] .note a {
+                color: var(--gold);
+            }
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) .note a {
+                    color: var(--gold);
+                }
+            }
+
+            /* price table */
+            .ptable {
+                margin-top: 40px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 24px;
+                overflow: hidden;
+                box-shadow: var(--shadow);
+            }
+            .prow {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 12px;
+                align-items: center;
+                padding: 18px 22px;
+                border-top: 1px solid var(--line);
+            }
+            .prow:first-child {
+                border-top: 0;
+            }
+            .prow .name {
+                font-weight: 700;
+            }
+            .prow .name small {
+                display: block;
+                font-weight: 500;
+                color: var(--muted);
+                font-size: 13px;
+            }
+            .prow .val {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 17px;
+                white-space: nowrap;
+            }
+            .prow .val span {
+                font-family: Manrope, system-ui, sans-serif;
+                font-size: 13px;
+                color: var(--muted);
+                font-weight: 600;
+                margin-right: 4px;
+            }
+            @media (min-width: 720px) {
+                .prow {
+                    grid-template-columns: 200px 1fr auto;
+                    padding: 20px 28px;
+                }
+                .prow .stars {
+                    font-size: 18px;
+                }
+            }
+            .prow .stars-cell {
+                display: none;
+            }
+            @media (min-width: 720px) {
+                .prow .stars-cell {
+                    display: block;
+                }
+            }
+
+            /* ISO */
+            .iso-grid {
+                display: grid;
+                gap: 12px;
+                margin-top: 40px;
+            }
+            @media (min-width: 640px) {
+                .iso-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (min-width: 1000px) {
+                .iso-grid {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+            .iso {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 16px;
+                padding: 18px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+            .iso b {
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                font-size: 16px;
+            }
+            .iso span {
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            .iso em {
+                font-style: normal;
+                font-weight: 800;
+                font-size: 13px;
+                color: var(--gold);
+                margin-top: auto;
+                padding-top: 6px;
+            }
+
+            /* why */
+            .dark-sec {
+                background: var(--brand);
+                color: var(--on-brand);
+            }
+            .dark-sec .lead {
+                color: rgba(246, 243, 236, 0.75);
+            }
+            .why {
+                display: grid;
+                gap: 14px;
+                margin-top: 44px;
+            }
+            @media (min-width: 640px) {
+                .why {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (min-width: 1000px) {
+                .why {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            .why div {
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                border-radius: 18px;
+                padding: 22px;
+                display: flex;
+                gap: 14px;
+                align-items: flex-start;
+                background: rgba(255, 255, 255, 0.03);
+            }
+            .why svg {
+                flex: none;
+                color: var(--gold);
+            }
+            .why b {
+                display: block;
+                font-size: 16px;
+                margin-bottom: 2px;
+            }
+            .why span {
+                font-size: 14px;
+                opacity: 0.7;
+            }
+            .steps {
+                display: grid;
+                gap: 14px;
+                margin-top: 56px;
+                counter-reset: s;
+            }
+            @media (min-width: 900px) {
+                .steps {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+            .step {
+                counter-increment: s;
+                padding-top: 18px;
+                border-top: 2px solid rgba(255, 255, 255, 0.15);
+            }
+            .step::before {
+                content: "0" counter(s);
+                font-family: Unbounded, Manrope, system-ui, sans-serif;
+                color: var(--gold);
+                font-size: 14px;
+            }
+            .step b {
+                display: block;
+                margin: 8px 0 4px;
+                font-size: 16px;
+            }
+            .step span {
+                font-size: 14px;
+                opacity: 0.7;
+            }
+
+            /* geo */
+            .geo-head {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: end;
+                justify-content: space-between;
+            }
+            .search {
+                position: relative;
+                width: 100%;
+                max-width: 380px;
+            }
+            .search input {
+                width: 100%;
+                padding: 14px 16px 14px 44px;
+                border-radius: 999px;
+                border: 1px solid var(--line);
+                background: var(--surface);
+                color: var(--ink);
+                font: 500 15px Manrope;
+                outline: none;
+            }
+            .search input:focus {
+                border-color: var(--gold);
+            }
+            .search svg {
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--muted);
+            }
+            .hubs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 32px 0 24px;
+            }
+            .hubs span {
+                padding: 8px 14px;
+                border-radius: 999px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .regions {
+                display: grid;
+                gap: 10px;
+            }
+            @media (min-width: 800px) {
+                .regions {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            details.reg {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                padding: 0 18px;
+            }
+            details.reg summary {
+                cursor: pointer;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 0;
+                font-weight: 700;
+                gap: 10px;
+            }
+            details.reg summary::-webkit-details-marker {
+                display: none;
+            }
+            details.reg summary small {
+                color: var(--muted);
+                font-weight: 600;
+                font-size: 13px;
+                white-space: nowrap;
+            }
+            details.reg p {
+                padding: 0 0 16px;
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            details.reg mark {
+                background: var(--gold-soft);
+                color: inherit;
+                border-radius: 4px;
+                padding: 0 2px;
+            }
+            .empty {
+                display: none;
+                color: var(--muted);
+                padding: 20px 0;
+            }
+
+            /* form */
+            .contact {
+                display: grid;
+                gap: 28px;
+            }
+            @media (min-width: 980px) {
+                .contact {
+                    grid-template-columns: 0.9fr 1.1fr;
+                    gap: 48px;
+                }
+            }
+            .c-list {
+                display: grid;
+                gap: 12px;
+                margin-top: 28px;
+            }
+            .c-item {
+                display: flex;
+                gap: 14px;
+                align-items: center;
+                padding: 16px 18px;
+                border-radius: 16px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                transition: border-color 0.2s;
+            }
+            .c-item:hover {
+                border-color: var(--gold);
+            }
+            .c-item .ic {
+                width: 42px;
+                height: 42px;
+                border-radius: 12px;
+            }
+            .c-item small {
+                display: block;
+                color: var(--muted);
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+            .c-item b {
+                font-size: 16px;
+            }
+            form.f {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 24px;
+                padding: 26px;
+                box-shadow: var(--shadow);
+                display: grid;
+                gap: 14px;
+            }
+            @media (min-width: 640px) {
+                form.f {
+                    padding: 34px;
+                    grid-template-columns: 1fr 1fr;
+                }
+                .f .full {
+                    grid-column: 1/-1;
+                }
+            }
+            .f label {
+                display: grid;
+                gap: 6px;
+                font-size: 13px;
+                font-weight: 700;
+                color: var(--ink-2);
+            }
+            .f input,
+            .f select,
+            .f textarea {
+                width: 100%;
+                padding: 13px 14px;
+                border-radius: 12px;
+                border: 1px solid var(--line);
+                background: var(--bg);
+                color: var(--ink);
+                font: 500 15px Manrope;
+                outline: none;
+                transition: border-color 0.2s;
+            }
+            .f input:focus,
+            .f select:focus,
+            .f textarea:focus {
+                border-color: var(--gold);
+            }
+            .f textarea {
+                min-height: 100px;
+                resize: vertical;
+            }
+            .seg {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            .seg label {
+                display: block;
+                cursor: pointer;
+            }
+            .seg input {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+                width: auto;
+            }
+            .seg span {
+                display: inline-block;
+                padding: 10px 16px;
+                border-radius: 999px;
+                border: 1px solid var(--line);
+                font-weight: 600;
+                font-size: 14px;
+                color: var(--ink-2);
+            }
+            .seg input:checked + span {
+                background: var(--brand);
+                border-color: var(--brand);
+                color: var(--on-brand);
+            }
+            .f .consent {
+                font-size: 12px;
+                color: var(--muted);
+                font-weight: 500;
+            }
+            .f .btn {
+                width: 100%;
+            }
+            .ok-msg {
+                display: none;
+                padding: 14px;
+                border-radius: 12px;
+                background: var(--gold-soft);
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+            footer {
+                background: var(--ink);
+                color: var(--bg);
+                padding: 56px 0 28px;
+            }
+            :root[data-theme="dark"] footer {
+                background: #070912;
+                color: var(--ink);
+            }
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) footer {
+                    background: #070912;
+                    color: var(--ink);
+                }
+            }
+            .f-grid {
+                display: grid;
+                gap: 32px;
+            }
+            @media (min-width: 900px) {
+                .f-grid {
+                    grid-template-columns: 1.2fr 1fr 1fr;
+                }
+            }
+            footer h5 {
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                opacity: 0.55;
+                margin-bottom: 14px;
+                font-weight: 700;
+            }
+            footer .links {
+                display: grid;
+                gap: 8px;
+                font-size: 15px;
+            }
+            footer .links a {
+                opacity: 0.85;
+            }
+            footer .links a:hover {
+                opacity: 1;
+                color: var(--gold);
+            }
+            footer .copy {
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                margin-top: 40px;
+                padding-top: 22px;
+                font-size: 13px;
+                opacity: 0.55;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 12px;
+            }
+            .theme-t {
+                background: none;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: inherit;
+                border-radius: 999px;
+                padding: 6px 12px;
+                font: 600 12px Manrope;
+                cursor: pointer;
+            }
+
+            /* ===== навигация: мега-меню ===== */
+            .nav .wrap {
+                position: relative;
+            }
+            .menu {
+                align-items: stretch;
+                height: 100%;
+                gap: 28px;
+            }
+            .menu > a,
+            .dd > button {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                height: 100%;
+                background: none;
+                border: 0;
+                font: inherit;
+                color: inherit;
+                cursor: pointer;
+                position: relative;
+            }
+            .menu > a::after,
+            .dd > button::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -1px;
+                height: 2px;
+                background: var(--gold);
+                transform: scaleX(0);
+                transition: transform 0.2s;
+            }
+            .menu > a:hover::after,
+            .dd:hover > button::after,
+            .dd.open > button::after,
+            .menu > a[aria-current]::after {
+                transform: scaleX(1);
+            }
+            .dd > button:hover,
+            .dd.open > button {
+                color: var(--ink);
+            }
+            .dd > button svg {
+                transition: transform 0.2s;
+                opacity: 0.6;
+            }
+            .dd:hover > button svg,
+            .dd.open > button svg {
+                transform: rotate(180deg);
+            }
+            .mega {
+                position: absolute;
+                left: 28px;
+                right: 28px;
+                top: 100%;
+                margin-top: 1px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-top: 0;
+                border-radius: 0 0 24px 24px;
+                box-shadow: var(--shadow);
+                padding: 28px;
+                color: var(--ink);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-6px);
+                transition:
+                    opacity 0.18s,
+                    transform 0.18s,
+                    visibility 0.18s;
+            }
+            .dd:hover .mega,
+            .dd.open .mega {
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+            }
+            .mega-grid {
+                display: grid;
+                grid-template-columns: 1.05fr 1fr 0.95fr;
+                gap: 28px;
+            }
+            .mega h6 {
+                font: 700 12px Manrope;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: var(--muted);
+                margin: 0 0 10px 12px;
+            }
+            .mlink {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 9px 12px;
+                border-radius: 11px;
+                font-weight: 600;
+                font-size: 15px;
+                color: var(--ink-2);
+                transition:
+                    background 0.15s,
+                    color 0.15s;
+            }
+            .mlink:hover {
+                background: var(--surface-2);
+                color: var(--ink);
+            }
+            .mlink .stars {
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
+            .mlink b {
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                background: var(--gold-soft);
+                color: var(--gold);
+                padding: 3px 8px;
+                border-radius: 999px;
+                white-space: nowrap;
+            }
+            .mlink.all {
+                color: var(--brand-2);
+                font-weight: 700;
+                margin-top: 4px;
+            }
+            :root[data-theme="dark"] .mlink.all {
+                color: var(--gold);
+            }
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) .mlink.all {
+                    color: var(--gold);
+                }
+            }
+            .mlink.all {
+                justify-content: flex-start;
+            }
+            .mlink.all::after {
+                content: "→";
+            }
+            .mpromo {
+                background: var(--brand);
+                color: var(--on-brand);
+                border-radius: 18px;
+                padding: 22px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                position: relative;
+                overflow: hidden;
+            }
+            .mpromo::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(
+                    260px 180px at 100% 0,
+                    rgba(201, 154, 46, 0.35),
+                    transparent 70%
+                );
+            }
+            .mpromo > * {
+                position: relative;
+            }
+            .mpromo h4 {
+                font:
+                    600 17px/1.25 Unbounded,
+                    Manrope,
+                    sans-serif;
+            }
+            .mpromo p {
+                font-size: 14px;
+                opacity: 0.75;
+            }
+            .mpromo .btn {
+                align-self: flex-start;
+                padding: 11px 18px;
+                font-size: 14px;
+                margin-top: auto;
+            }
+            .mcards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 14px;
+            }
+            .mcard {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+                border: 1px solid var(--line);
+                border-radius: 18px;
+                transition:
+                    border-color 0.2s,
+                    transform 0.2s;
+            }
+            .mcard:hover {
+                border-color: var(--gold);
+                transform: translateY(-2px);
+            }
+            .mcard h4 {
+                font:
+                    600 16px/1.25 Unbounded,
+                    Manrope,
+                    sans-serif;
+            }
+            .mcard p {
+                font-size: 14px;
+                color: var(--ink-2);
+                flex: 1;
+            }
+            .mcard .chip.price {
+                align-self: flex-start;
+            }
+            .mcity-head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 16px;
+                margin-bottom: 16px;
+            }
+            .mcity-head .search {
+                max-width: 300px;
+            }
+            .mcity-head .search input {
+                padding: 11px 14px 11px 40px;
+                font-size: 14px;
+            }
+            .mcities {
+                columns: 5;
+                column-gap: 18px;
+            }
+            .mcities a {
+                display: block;
+                padding: 5px 8px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--ink-2);
+                break-inside: avoid;
+            }
+            .mcities a:hover {
+                background: var(--surface-2);
+                color: var(--ink);
+            }
+            .mcities a.hide {
+                display: none;
+            }
+
+            /* мобильное меню с подразделами */
+            .mobile-menu {
+                max-height: calc(100vh - 70px);
+                overflow: auto;
+            }
+            .mobile-menu details {
+                border-bottom: 1px solid var(--line);
+            }
+            .mobile-menu summary {
+                list-style: none;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px 4px;
+                font-weight: 600;
+            }
+            .mobile-menu summary::-webkit-details-marker {
+                display: none;
+            }
+            .mobile-menu summary::after {
+                content: "+";
+                font-size: 20px;
+                color: var(--gold);
+                line-height: 1;
+            }
+            .mobile-menu details[open] summary::after {
+                content: "−";
+            }
+            .mm-sub {
+                display: grid;
+                padding: 0 0 10px 12px;
+            }
+            .mobile-menu .mm-sub a {
+                border: 0;
+                padding: 8px 4px;
+                font-weight: 500;
+                color: var(--ink-2);
+            }
+            .mobile-menu .btn {
+                margin-top: 14px;
+                border: 0;
+            }
+
+            /* ссылки внутри блоков главной */
+            .card {
+                position: relative;
+            }
+            .card h3 a::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: inherit;
+            }
+            .more {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-weight: 700;
+                font-size: 14px;
+                color: var(--brand-2);
+            }
+            .more::after {
+                content: "→";
+                transition: transform 0.2s;
+            }
+            .card:hover .more::after,
+            .more:hover::after {
+                transform: translateX(4px);
+            }
+            .card.featured .more,
+            .dark-sec .more {
+                color: var(--gold);
+            }
+            :root[data-theme="dark"] .more {
+                color: var(--gold);
+            }
+            @media (prefers-color-scheme: dark) {
+                :root:not([data-theme="light"]) .more {
+                    color: var(--gold);
+                }
+            }
+            .star-row {
+                transition: padding 0.2s;
+            }
+            a.star-row:hover {
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+            a.star-row:hover .price {
+                color: var(--gold);
+            }
+            a.prow {
+                transition: background 0.15s;
+            }
+            a.prow:hover {
+                background: var(--surface-2);
+            }
+            a.prow .val::after {
+                content: " →";
+                color: var(--gold);
+                font-family: Manrope, sans-serif;
+            }
+            .sec-foot {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 22px;
+            }
+            a.iso {
+                transition: border-color 0.2s;
+            }
+            a.iso:hover {
+                border-color: var(--gold);
+            }
+            .hubs a {
+                padding: 8px 14px;
+                border-radius: 999px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                font-size: 14px;
+                font-weight: 600;
+                transition:
+                    border-color 0.2s,
+                    color 0.2s;
+            }
+            .hubs a:hover {
+                border-color: var(--gold);
+                color: var(--gold);
+            }
+            details.reg p a {
+                text-decoration: underline;
+                text-decoration-color: var(--gold);
+                text-underline-offset: 3px;
+            }
+            details.reg .go {
+                display: block;
+                margin-top: 8px;
+                text-decoration: none !important;
+            }
+
+            /* типы объектов */
+            .types {
+                display: grid;
+                gap: 10px;
+                margin-top: 36px;
+            }
+            @media (min-width: 640px) {
+                .types {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (min-width: 1000px) {
+                .types {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+            .type {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 16px 18px;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 16px;
+                font-weight: 700;
+                font-size: 15px;
+                transition:
+                    border-color 0.2s,
+                    transform 0.2s;
+            }
+            .type:hover {
+                border-color: var(--gold);
+                transform: translateY(-2px);
+            }
+            .type .ic {
+                width: 38px;
+                height: 38px;
+                border-radius: 11px;
+                flex: none;
+            }
+            .type small {
+                display: block;
+                font-weight: 500;
+                font-size: 13px;
+                color: var(--muted);
+            }
+
+            /* футер — карта сайта */
+            @media (min-width: 900px) {
+                .f-grid {
+                    grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr;
+                }
+            }
+            footer .links {
+                font-size: 14px;
+            }
+
+            .reveal {
+                opacity: 0;
+                transform: translateY(18px);
+                transition:
+                    opacity 0.7s,
+                    transform 0.7s;
+            }
+            .reveal.in {
+                opacity: 1;
+                transform: none;
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .reveal {
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
+                }
+                html {
+                    scroll-behavior: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="wrap">
+                <div class="tb-left">
+                    <span>Работаем по всей России</span
+                    ><span>Бесплатная консультация</span>
+                </div>
+                <div class="tb-right">
+                    <a href="tel:+79920100537">+7 (992) 010-05-37</a
+                    ><a
+                        href="https://t.me/Olga36541"
+                        target="_blank"
+                        rel="noopener"
+                        >Telegram</a
+                    ><a
+                        href="https://vk.com/promoural"
+                        target="_blank"
+                        rel="noopener"
+                        >VK</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <header class="nav">
+            <div class="wrap">
+                <a href="#top" class="logo">
+                    <span class="logo-mark"
+                        ><svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"
+                            /></svg
+                    ></span>
+                    <span>Промо<small>ЦЕНТР СЕРТИФИКАЦИИ</small></span>
+                </a>
+                <nav class="menu" aria-label="Основная навигация">
+                    <div class="dd">
+                        <button aria-expanded="false">
+                            Классификация
+                            <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                            >
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="mega">
+                            <div class="mega-grid">
+                                <div>
+                                    <h6>Реестр и звёзды</h6>
+                                    <a
+                                        class="mlink"
+                                        href="/registraciya-v-reestre-klassificirovannykh-sredstv-razmeshcheniya/"
+                                        >Регистрация в реестре КСР
+                                        <b>Обязательно</b></a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikaciya-gostinicy-bez-zvezd/"
+                                        >Без звёзд
+                                        <span class="chip">от 20 000 ₽</span></a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikaciya-gostinicy-na-odnu-zvezdu/"
+                                        >1 звезда
+                                        <span class="stars"
+                                            >★<span class="off"
+                                                >★★★★</span
+                                            ></span
+                                        ></a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikaciya-gostinicy-na-dve-zvezdy/"
+                                        >2 звезды
+                                        <span class="stars"
+                                            >★★<span class="off"
+                                                >★★★</span
+                                            ></span
+                                        ></a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikaciya-gostinicy-na-tri-zvezdy/"
+                                        >3 звезды
+                                        <span class="stars"
+                                            >★★★<span class="off"
+                                                >★★</span
+                                            ></span
+                                        ></a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikaciya-gostinicy-na-chetyre-zvezdy/"
+                                        >4 звезды
+                                        <span class="stars"
+                                            >★★★★<span class="off"
+                                                >★</span
+                                            ></span
+                                        ></a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikaciya-gostinicy-na-pyat-zvezd/"
+                                        >5 звёзд
+                                        <span class="stars">★★★★★</span></a
+                                    >
+                                </div>
+                                <div>
+                                    <h6>По типу объекта</h6>
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikaciya-otelei/"
+                                        >Отели и гостиницы</a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikaciya-kurortnogo-otelya-na-kategoriy/"
+                                        >Курортные отели</a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikacia-bazi-otdiha/"
+                                        >Базы отдыха</a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/kategoririvanie-doma-otdiha/"
+                                        >Дома отдыха</a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikacia-pansionata/"
+                                        >Пансионаты</a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikacia-apart-otelya-na-zvezdnuyu-kategoriyu/"
+                                        >Апарт-отели</a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikacia-hostela-na-kategoriyu/"
+                                        >Хостелы</a
+                                    >
+                                    <a
+                                        class="mlink"
+                                        href="/klassifikacia-motelya-po-kolichestvu-nomerov/"
+                                        >Мотели</a
+                                    >
+                                    <a
+                                        class="mlink all"
+                                        href="/klassifikaciya-gostinic/"
+                                        >Всё о классификации</a
+                                    >
+                                </div>
+                                <div class="mpromo">
+                                    <h4>
+                                        Сколько стоит классификация вашего
+                                        объекта?
+                                    </h4>
+                                    <p>
+                                        Цена зависит от категории и количества
+                                        номеров. Посмотрите прайс или получите
+                                        расчёт бесплатно.
+                                    </p>
+                                    <a
+                                        class="btn btn-gold"
+                                        href="/klassifikacia-gostinic-prais/"
+                                        >Открыть прайс</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dd">
+                        <button aria-expanded="false">
+                            Другие услуги
+                            <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                            >
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="mega">
+                            <div class="mcards">
+                                <a class="mcard" href="/sertifikaciya-iso/"
+                                    ><span class="ic"
+                                        ><svg
+                                            width="22"
+                                            height="22"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <circle cx="12" cy="8" r="6" />
+                                            <path
+                                                d="M8.2 13.2L7 22l5-3 5 3-1.2-8.8"
+                                            /></svg
+                                    ></span>
+                                    <h4>Сертификация ISO</h4>
+                                    <p>
+                                        ISO 9001, 14001, 22000, 45001, 27001 и
+                                        другие системы менеджмента.
+                                    </p>
+                                    <span class="chip price"
+                                        >от 9 900 ₽</span
+                                    ></a
+                                >
+                                <a class="mcard" href="/pasport-bezopasnosti/"
+                                    ><span class="ic"
+                                        ><svg
+                                            width="22"
+                                            height="22"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path
+                                                d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                            /></svg
+                                    ></span>
+                                    <h4>Паспорт безопасности</h4>
+                                    <p>
+                                        Паспорт антитеррористической
+                                        защищённости, акт обследования и
+                                        категорирования.
+                                    </p>
+                                    <span class="chip price"
+                                        >от 40 000 ₽</span
+                                    ></a
+                                >
+                                <a
+                                    class="mcard"
+                                    href="/upk-i-professionalnaya-perepodgotovka/"
+                                    ><span class="ic"
+                                        ><svg
+                                            width="22"
+                                            height="22"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path d="M2 7l10-4 10 4-10 4z" />
+                                            <path
+                                                d="M6 9v5c0 2 3 3.5 6 3.5s6-1.5 6-3.5V9"
+                                            /></svg
+                                    ></span>
+                                    <h4>Обучение персонала</h4>
+                                    <p>
+                                        Повышение квалификации и
+                                        профессиональная переподготовка онлайн.
+                                    </p>
+                                    <span class="chip price"
+                                        >от 3 000 ₽</span
+                                    ></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dd">
+                        <button aria-expanded="false">
+                            Города
+                            <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                            >
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="mega">
+                            <div class="mcity-head">
+                                <a
+                                    class="mlink all"
+                                    href="/klassifikaciya-gostinic-po-gorodam/"
+                                    style="margin: 0"
+                                    >Классификация гостиниц в городах России</a
+                                >
+                                <div class="search">
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2.2"
+                                        stroke-linecap="round"
+                                    >
+                                        <circle cx="11" cy="11" r="7" />
+                                        <path d="M20 20l-3.5-3.5" /></svg
+                                    ><input
+                                        type="search"
+                                        placeholder="Найти город"
+                                        autocomplete="off"
+                                        data-cityfilter
+                                    />
+                                </div>
+                            </div>
+                            <div class="mcities">
+                                <a href="/klassifikaciya-gostinic/moscow/"
+                                    >Москва</a
+                                ><a
+                                    href="/klassifikaciya-gostinic/st-petersburg/"
+                                    >Санкт-Петербург</a
+                                ><a href="/klassifikaciya-gostinic/altay/"
+                                    >Алтай</a
+                                ><a href="/klassifikaciya-gostinic/anapa/"
+                                    >Анапа</a
+                                ><a href="/klassifikaciya-gostinic/astrakhan/"
+                                    >Астрахань</a
+                                ><a href="/klassifikaciya-gostinic/barnaul/"
+                                    >Барнаул</a
+                                ><a href="/klassifikaciya-gostinic/vladivostok/"
+                                    >Владивосток</a
+                                ><a href="/klassifikaciya-gostinic/vladimir/"
+                                    >Владимир</a
+                                ><a href="/klassifikaciya-gostinic/volgograd/"
+                                    >Волгоград</a
+                                ><a href="/klassifikaciya-gostinic/vologda/"
+                                    >Вологда</a
+                                ><a href="/klassifikaciya-gostinic/voronezh/"
+                                    >Воронеж</a
+                                ><a
+                                    href="/klassifikaciya-gostinic/ekaterinburg/"
+                                    >Екатеринбург</a
+                                ><a href="/klassifikaciya-gostinic/ivanovo/"
+                                    >Иваново</a
+                                ><a href="/klassifikaciya-gostinic/izhevsk/"
+                                    >Ижевск</a
+                                ><a href="/klassifikaciya-gostinic/irkutsk/"
+                                    >Иркутск</a
+                                ><a href="/klassifikaciya-gostinic/ioshkar-ola/"
+                                    >Йошкар-Ола</a
+                                ><a href="/klassifikaciya-gostinic/kazan/"
+                                    >Казань</a
+                                ><a href="/klassifikaciya-gostinic/kaliningrad/"
+                                    >Калининград</a
+                                ><a href="/klassifikaciya-gostinic/kaluga/"
+                                    >Калуга</a
+                                ><a href="/klassifikaciya-gostinic/kemerovo/"
+                                    >Кемерово</a
+                                ><a href="/klassifikaciya-gostinic/kirov/"
+                                    >Киров</a
+                                ><a href="/klassifikaciya-gostinic/kostroma/"
+                                    >Кострома</a
+                                ><a href="/klassifikaciya-gostinic/krasnodar/"
+                                    >Краснодар</a
+                                ><a href="/klassifikaciya-gostinic/krasnoyarsk/"
+                                    >Красноярск</a
+                                ><a href="/klassifikaciya-gostinic/kurgan/"
+                                    >Курган</a
+                                ><a href="/klassifikaciya-gostinic/lipetsk/"
+                                    >Липецк</a
+                                ><a href="/klassifikaciya-gostinic/murmansk/"
+                                    >Мурманск</a
+                                ><a
+                                    href="/klassifikaciya-gostinic/naberezhnye-chelny/"
+                                    >Набережные Челны</a
+                                ><a
+                                    href="/klassifikaciya-gostinic/nizhny-novgorod/"
+                                    >Нижний Новгород</a
+                                ><a href="/klassifikaciya-gostinic/novosibirsk/"
+                                    >Новосибирск</a
+                                ><a href="/klassifikaciya-gostinic/omsk/"
+                                    >Омск</a
+                                ><a href="/klassifikaciya-gostinic/orel/"
+                                    >Орёл</a
+                                ><a href="/klassifikaciya-gostinic/orenburg/"
+                                    >Оренбург</a
+                                ><a href="/klassifikaciya-gostinic/penza/"
+                                    >Пенза</a
+                                ><a href="/klassifikaciya-gostinic/perm/"
+                                    >Пермь</a
+                                ><a
+                                    href="/klassifikaciya-gostinic/petrozavodsk/"
+                                    >Петрозаводск</a
+                                ><a
+                                    href="/klassifikaciya-gostinic/rostov-na-donu/"
+                                    >Ростов-на-Дону</a
+                                ><a href="/klassifikaciya-gostinic/ryazan/"
+                                    >Рязань</a
+                                ><a href="/klassifikaciya-gostinic/samara/"
+                                    >Самара</a
+                                ><a href="/klassifikaciya-gostinic/saratov/"
+                                    >Саратов</a
+                                ><a href="/klassifikaciya-gostinic/sahalin/"
+                                    >Сахалин</a
+                                ><a href="/klassifikaciya-gostinic/sochi/"
+                                    >Сочи</a
+                                ><a href="/klassifikaciya-gostinic/stavropol/"
+                                    >Ставрополь</a
+                                ><a href="/klassifikaciya-gostinic/surgut/"
+                                    >Сургут</a
+                                ><a href="/klassifikaciya-gostinic/tambov/"
+                                    >Тамбов</a
+                                ><a href="/klassifikaciya-gostinic/tver/"
+                                    >Тверь</a
+                                ><a href="/klassifikaciya-gostinic/tolyatti/"
+                                    >Тольятти</a
+                                ><a href="/klassifikaciya-gostinic/tomsk/"
+                                    >Томск</a
+                                ><a href="/klassifikaciya-gostinic/tula/"
+                                    >Тула</a
+                                ><a href="/klassifikaciya-gostinic/tumen/"
+                                    >Тюмень</a
+                                ><a href="/klassifikaciya-gostinic/ulyanovsk/"
+                                    >Ульяновск</a
+                                ><a href="/klassifikaciya-gostinic/ufa/">Уфа</a
+                                ><a href="/klassifikaciya-gostinic/khabarovsk/"
+                                    >Хабаровск</a
+                                ><a
+                                    href="/klassifikaciya-gostinic/khanty-mansyisk/"
+                                    >Ханты-Мансийск</a
+                                ><a href="/klassifikaciya-gostinic/cheboksary/"
+                                    >Чебоксары</a
+                                ><a href="/klassifikaciya-gostinic/chelyabinsk/"
+                                    >Челябинск</a
+                                ><a href="/klassifikaciya-gostinic/chita/"
+                                    >Чита</a
+                                ><a href="/klassifikaciya-gostinic/yaroslavl/"
+                                    >Ярославль</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/klassifikacia-gostinic-prais/">Цены</a>
+                    <a href="/contacts/">Контакты</a>
+                </nav>
+                <a href="#contact" class="btn btn-dark nav-cta"
+                    >Оставить заявку</a
+                >
+                <button
+                    class="burger"
+                    aria-label="Меню"
+                    onclick="
+                        document.getElementById('mm').classList.toggle('open')
+                    "
+                >
+                    <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    >
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+                </button>
+            </div>
+            <div
+                class="mobile-menu"
+                id="mm"
+                onclick="
+                    if (event.target.tagName === 'A')
+                        this.classList.remove('open');
+                "
+            >
+                <details>
+                    <summary>Классификация</summary>
+                    <div class="mm-sub">
+                        <a
+                            href="/registraciya-v-reestre-klassificirovannykh-sredstv-razmeshcheniya/"
+                            >Регистрация в реестре КСР</a
+                        >
+                        <a href="/klassifikaciya-gostinicy-bez-zvezd/"
+                            >Без звёзд</a
+                        >
+                        <a href="/klassifikaciya-gostinicy-na-odnu-zvezdu/"
+                            >1 звезда</a
+                        >
+                        <a href="/klassifikaciya-gostinicy-na-dve-zvezdy/"
+                            >2 звезды</a
+                        >
+                        <a href="/klassifikaciya-gostinicy-na-tri-zvezdy/"
+                            >3 звезды</a
+                        >
+                        <a href="/klassifikaciya-gostinicy-na-chetyre-zvezdy/"
+                            >4 звезды</a
+                        >
+                        <a href="/klassifikaciya-gostinicy-na-pyat-zvezd/"
+                            >5 звёзд</a
+                        >
+                        <a href="/klassifikaciya-gostinic/"
+                            >Все типы объектов →</a
+                        >
+                    </div>
+                </details>
+                <details>
+                    <summary>Другие услуги</summary>
+                    <div class="mm-sub">
+                        <a href="/sertifikaciya-iso/">Сертификация ISO</a>
+                        <a href="/pasport-bezopasnosti/"
+                            >Паспорт безопасности</a
+                        >
+                        <a href="/upk-i-professionalnaya-perepodgotovka/"
+                            >Обучение персонала</a
+                        >
+                    </div>
+                </details>
+                <a href="/klassifikaciya-gostinic-po-gorodam/">Города</a>
+                <a href="/klassifikacia-gostinic-prais/">Цены</a>
+                <a href="/contacts/">Контакты</a>
+                <a href="#contact" class="btn btn-gold">Оставить заявку</a>
+            </div>
+        </header>
+
+        <section class="hero" id="top">
+            <div class="wrap">
+                <div>
+                    <span class="pill"
+                        ><b>С 1.01.2025</b> Реестр КСР обязателен для всех
+                        средств размещения</span
+                    >
+                    <h1>
+                        Классификация гостиниц и&nbsp;баз отдыха
+                        <em>по всей России</em>
+                    </h1>
+                    <p class="sub">
+                        Регистрация в Едином реестре ФСА, присвоение звёзд,
+                        паспорт безопасности, сертификация ISO и обучение
+                        персонала — под ключ, по договору и с минимальным
+                        пакетом документов.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-gold"
+                            >Получить консультацию
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.4"
+                                stroke-linecap="round"
+                            >
+                                <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                        ></a>
+                        <a href="#prices" class="btn btn-ghost"
+                            >Смотреть цены</a
+                        >
+                    </div>
+                    <div class="hero-stats">
+                        <div><strong>с 2004</strong><span>на рынке</span></div>
+                        <div>
+                            <strong>от 1 дня</strong
+                            ><span>срок подготовки</span>
+                        </div>
+                        <div>
+                            <strong>3 года</strong
+                            ><span>действует категория</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <h3>Классификация на звёзды</h3>
+                    <p class="muted">Стоимость для гостиниц и санаториев</p>
+                    <a
+                        class="star-row"
+                        href="/klassifikaciya-gostinicy-na-odnu-zvezdu/"
+                        ><span class="stars"
+                            >★<span class="off">★★★★</span></span
+                        ><span class="price">от 20 000 ₽</span></a
+                    >
+                    <a
+                        class="star-row"
+                        href="/klassifikaciya-gostinicy-na-dve-zvezdy/"
+                        ><span class="stars"
+                            >★★<span class="off">★★★</span></span
+                        ><span class="price">от 30 000 ₽</span></a
+                    >
+                    <a
+                        class="star-row"
+                        href="/klassifikaciya-gostinicy-na-tri-zvezdy/"
+                        ><span class="stars"
+                            >★★★<span class="off">★★</span></span
+                        ><span class="price">от 40 000 ₽</span></a
+                    >
+                    <a
+                        class="star-row"
+                        href="/klassifikaciya-gostinicy-na-chetyre-zvezdy/"
+                        ><span class="stars"
+                            >★★★★<span class="off">★</span></span
+                        ><span class="price">от 60 000 ₽</span></a
+                    >
+                    <a
+                        class="star-row"
+                        href="/klassifikaciya-gostinicy-na-pyat-zvezd/"
+                        ><span class="stars">★★★★★</span
+                        ><span class="price">от 80 000 ₽</span></a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="wrap">
+                <span class="eyebrow reveal">Услуги</span>
+                <h2 class="h2 reveal">
+                    Всё для легальной работы средства размещения
+                </h2>
+                <p class="lead reveal">
+                    Оформим разрешительные документы для гостиниц, санаториев,
+                    баз отдыха и кемпингов, а также сертификаты и удостоверения
+                    для любой организации.
+                </p>
+                <div class="grid-3">
+                    <article class="card featured reveal">
+                        <span class="tag">Обязательно с 2025 года</span>
+                        <div class="ic">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M9 11l3 3L22 4" />
+                                <path
+                                    d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"
+                                />
+                            </svg>
+                        </div>
+                        <h3>
+                            <a
+                                href="/registraciya-v-reestre-klassificirovannykh-sredstv-razmeshcheniya/"
+                                >Регистрация в реестре КСР</a
+                            >
+                        </h3>
+                        <p>
+                            Внесение в Единый реестр объектов классификации в
+                            сфере туристской индустрии: гостиница, санаторий,
+                            база отдыха, кемпинг. Тип средства размещения
+                            действует три года.
+                        </p>
+                        <div class="meta">
+                            <span class="chip">1–2 дня</span
+                            ><span class="chip price">от 20 000 ₽</span>
+                        </div>
+                        <span class="more">Подробнее</span>
+                    </article>
+                    <article class="card reveal">
+                        <div class="ic">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"
+                                />
+                            </svg>
+                        </div>
+                        <h3>
+                            <a href="/klassifikaciya-gostinic/"
+                                >Классификация на звёзды</a
+                            >
+                        </h3>
+                        <p>
+                            Присвоение звёздной категории гостиницам и
+                            санаториям после регистрации в реестре. Присвоенная
+                            категория действует три года.
+                        </p>
+                        <div class="meta">
+                            <span class="chip">1–2 недели</span
+                            ><span class="chip price">от 30 000 ₽</span>
+                        </div>
+                        <span class="more">Подробнее</span>
+                    </article>
+                    <article class="card reveal">
+                        <div class="ic">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                />
+                            </svg>
+                        </div>
+                        <h3>
+                            <a href="/pasport-bezopasnosti/"
+                                >Паспорт безопасности</a
+                            >
+                        </h3>
+                        <p>
+                            Паспорт антитеррористической защищенности, акт
+                            обследования и категорирования объекта.
+                        </p>
+                        <div class="meta">
+                            <span class="chip">1–2 месяца</span
+                            ><span class="chip price">от 40 000 ₽</span>
+                        </div>
+                        <span class="more">Подробнее</span>
+                    </article>
+                    <article class="card reveal">
+                        <div class="ic">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="8" r="6" />
+                                <path d="M8.2 13.2L7 22l5-3 5 3-1.2-8.8" />
+                            </svg>
+                        </div>
+                        <h3>
+                            <a href="/sertifikaciya-iso/">Сертификация ISO</a>
+                        </h3>
+                        <p>
+                            Системы менеджмента качества: ISO 9001, 14001,
+                            22000, 45001, 27001 и многие другие стандарты.
+                        </p>
+                        <div class="meta">
+                            <span class="chip">1–2 дня</span
+                            ><span class="chip price">от 10 000 ₽</span>
+                        </div>
+                        <span class="more">Подробнее</span>
+                    </article>
+                    <article class="card reveal">
+                        <div class="ic">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M2 7l10-4 10 4-10 4z" />
+                                <path
+                                    d="M6 9v5c0 2 3 3.5 6 3.5s6-1.5 6-3.5V9"
+                                />
+                            </svg>
+                        </div>
+                        <h3>
+                            <a href="/upk-i-professionalnaya-perepodgotovka/"
+                                >Повышение квалификации</a
+                            >
+                        </h3>
+                        <p>
+                            Удостоверение о повышении квалификации, обучение
+                            онлайн. Нужны заявка, СНИЛС и диплом о высшем
+                            образовании.
+                        </p>
+                        <div class="meta">
+                            <span class="chip">1–2 дня</span
+                            ><span class="chip price">от 3 000 ₽</span>
+                        </div>
+                        <span class="more">Подробнее</span>
+                    </article>
+                    <article class="card reveal">
+                        <div class="ic">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                                />
+                                <path d="M14 2v6h6M8 13h8M8 17h5" />
+                            </svg>
+                        </div>
+                        <h3>
+                            <a href="/upk-i-professionalnaya-perepodgotovka/"
+                                >Профессиональная переподготовка</a
+                            >
+                        </h3>
+                        <p>
+                            Онлайн-обучение с выдачей диплома государственного
+                            образца. Нужны заявка, СНИЛС и диплом о высшем
+                            образовании.
+                        </p>
+                        <div class="meta">
+                            <span class="chip">1–2 дня</span
+                            ><span class="chip price">от 20 000 ₽</span>
+                        </div>
+                        <span class="more">Подробнее</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding-top: 0">
+            <div class="wrap">
+                <div class="band reveal">
+                    <div>
+                        <span class="eyebrow">Зачем это нужно</span>
+                        <h2>
+                            Выписка из реестра — обязательный разрешительный
+                            документ
+                        </h2>
+                        <p class="lead" style="font-size: 16px">
+                            Подтверждение классификации и запись в реестре
+                            требуют МВД, ФНС, Роспотребнадзор, администрации
+                            городов и районов. Для гостиниц и санаториев
+                            проводится аккредитация на звёзды; базы отдыха и
+                            кемпинги вносятся в реестр без звёздной категории.
+                        </p>
+                        <div class="fine">
+                            <strong>до 500 000 ₽</strong> штраф за отсутствие
+                            документа о классификации
+                        </div>
+                        <p class="law">
+                            Постановления Правительства РФ от 27.12.2024 № 1951
+                            и № 1952
+                        </p>
+                    </div>
+                    <ul class="ul-check">
+                        <li>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M20 6L9 17l-5-5" /></svg
+                            >Легально и законно оказывать гостиничные услуги по
+                            временному размещению людей
+                        </li>
+                        <li>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M20 6L9 17l-5-5" /></svg
+                            >Не иметь проблем с контролирующими органами — МВД,
+                            ФНС и другими
+                        </li>
+                        <li>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M20 6L9 17l-5-5" /></svg
+                            >Размещаться на официальных агрегаторах бронирования
+                            и работать с туроператорами
+                        </li>
+                        <li>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M20 6L9 17l-5-5" /></svg
+                            >Заключать госконтракты и сотрудничать с ведомствами
+                        </li>
+                        <li>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M20 6L9 17l-5-5" /></svg
+                            >Участвовать в госзакупках, тендерах и
+                            государственных программах
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="prices" style="background: var(--surface-2)">
+            <div class="wrap">
+                <span class="eyebrow reveal">Цены</span>
+                <h2 class="h2 reveal">Стоимость классификации</h2>
+                <p class="lead reveal">
+                    Итоговая цена зависит от объекта и региона — уточним
+                    бесплатно. Срок присвоения категории — 1–4 недели после
+                    оплаты и предоставления документов.
+                </p>
+                <div class="ptable reveal">
+                    <a class="prow" href="/klassifikaciya-gostinicy-bez-zvezd/"
+                        ><div class="stars-cell">
+                            <span class="chip">Без звёзд</span>
+                        </div>
+                        <div class="name">
+                            Внесение в реестр по типу<small
+                                >Гостиница, санаторий, база отдыха, кемпинг —
+                                самооценка</small
+                            >
+                        </div>
+                        <div class="val"><span>от</span>20 000 ₽</div></a
+                    >
+                    <a
+                        class="prow"
+                        href="/klassifikaciya-gostinicy-na-odnu-zvezdu/"
+                        ><div class="stars-cell stars">
+                            ★<span class="off">★★★★</span>
+                        </div>
+                        <div class="name">1 звезда</div>
+                        <div class="val"><span>от</span>20 000 ₽</div></a
+                    >
+                    <a
+                        class="prow"
+                        href="/klassifikaciya-gostinicy-na-dve-zvezdy/"
+                        ><div class="stars-cell stars">
+                            ★★<span class="off">★★★</span>
+                        </div>
+                        <div class="name">2 звезды</div>
+                        <div class="val"><span>от</span>30 000 ₽</div></a
+                    >
+                    <a
+                        class="prow"
+                        href="/klassifikaciya-gostinicy-na-tri-zvezdy/"
+                        ><div class="stars-cell stars">
+                            ★★★<span class="off">★★</span>
+                        </div>
+                        <div class="name">3 звезды</div>
+                        <div class="val"><span>от</span>40 000 ₽</div></a
+                    >
+                    <a
+                        class="prow"
+                        href="/klassifikaciya-gostinicy-na-chetyre-zvezdy/"
+                        ><div class="stars-cell stars">
+                            ★★★★<span class="off">★</span>
+                        </div>
+                        <div class="name">4 звезды</div>
+                        <div class="val"><span>от</span>60 000 ₽</div></a
+                    >
+                    <a
+                        class="prow"
+                        href="/klassifikaciya-gostinicy-na-pyat-zvezd/"
+                        ><div class="stars-cell stars">★★★★★</div>
+                        <div class="name">5 звёзд</div>
+                        <div class="val"><span>от</span>80 000 ₽</div></a
+                    >
+                </div>
+                <div class="sec-foot reveal">
+                    <span class="note" style="margin: 0"
+                        >Нажмите на категорию — откроются требования и цена по
+                        количеству номеров.</span
+                    >
+                    <a class="more" href="/klassifikacia-gostinic-prais/"
+                        >Полный прайс</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section id="types">
+            <div class="wrap">
+                <span class="eyebrow reveal">Тип объекта</span>
+                <h2 class="h2 reveal">
+                    Классификация для вашего типа размещения
+                </h2>
+                <p class="lead reveal">
+                    Требования к отелю, хостелу и базе отдыха отличаются.
+                    Выберите свой тип — расскажем, какую категорию можно
+                    получить и какие документы понадобятся.
+                </p>
+                <div class="types">
+                    <a class="type reveal" href="/klassifikaciya-otelei/"
+                        ><span class="ic"
+                            ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M4 21V4a1 1 0 011-1h10a1 1 0 011 1v17M16 9h3a1 1 0 011 1v11M2 21h20M8 7h4M8 11h4M8 15h4"
+                                /></svg></span
+                        ><span
+                            >Отели и гостиницы<small>1–5 звёзд</small></span
+                        ></a
+                    >
+                    <a
+                        class="type reveal"
+                        href="/klassifikaciya-kurortnogo-otelya-na-kategoriy/"
+                        ><span class="ic"
+                            ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            >
+                                <circle cx="12" cy="9" r="4" />
+                                <path
+                                    d="M12 1v2M4.2 4.2l1.4 1.4M1 12h2M21 12h2M18.4 5.6l1.4-1.4M2 19c3-2 5-2 7 0s4 2 6 0 4-2 7 0"
+                                /></svg></span
+                        ><span
+                            >Курортные отели<small>с категорией</small></span
+                        ></a
+                    >
+                    <a class="type reveal" href="/klassifikacia-bazi-otdiha/"
+                        ><span class="ic"
+                            ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M3 21l9-16 9 16zM12 5v16M9 21l3-5 3 5"
+                                /></svg></span
+                        ><span
+                            >Базы отдыха<small>без звёзд, по типу</small></span
+                        ></a
+                    >
+                    <a class="type reveal" href="/kategoririvanie-doma-otdiha/"
+                        ><span class="ic"
+                            ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M3 11l9-7 9 7M5 9.5V21h14V9.5M10 21v-6h4v6"
+                                /></svg></span
+                        ><span
+                            >Дома отдыха<small>категорирование</small></span
+                        ></a
+                    >
+                    <a class="type reveal" href="/klassifikacia-pansionata/"
+                        ><span class="ic"
+                            ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="3"
+                                    y="7"
+                                    width="18"
+                                    height="14"
+                                    rx="1"
+                                />
+                                <path
+                                    d="M8 7V3h8v4M7 11h2M11 11h2M15 11h2M7 15h2M15 15h2M11 21v-4h2v4"
+                                /></svg></span
+                        ><span>Пансионаты<small>и санатории</small></span></a
+                    >
+                    <a
+                        class="type reveal"
+                        href="/klassifikacia-apart-otelya-na-zvezdnuyu-kategoriyu/"
+                        ><span class="ic"
+                            ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="4"
+                                    y="2"
+                                    width="16"
+                                    height="20"
+                                    rx="1"
+                                />
+                                <path
+                                    d="M9 6h1M14 6h1M9 10h1M14 10h1M9 14h1M14 14h1M10 22v-4h4v4"
+                                /></svg></span
+                        ><span
+                            >Апарт-отели<small
+                                >и комплексы апартаментов</small
+                            ></span
+                        ></a
+                    >
+                    <a
+                        class="type reveal"
+                        href="/klassifikacia-hostela-na-kategoriyu/"
+                        ><span class="ic"
+                            ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M3 20V8M21 20v-6M3 14h18M3 10h7a2 2 0 012 2v2M17 10a2 2 0 100-4 2 2 0 000 4z"
+                                /></svg></span
+                        ><span>Хостелы<small>на категорию</small></span></a
+                    >
+                    <a
+                        class="type reveal"
+                        href="/klassifikacia-motelya-po-kolichestvu-nomerov/"
+                        ><span class="ic"
+                            ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M5 17h14l-1.5-6h-11zM6.5 11L8 6h8l1.5 5"
+                                />
+                                <circle cx="7.5" cy="17.5" r="1.5" />
+                                <circle
+                                    cx="16.5"
+                                    cy="17.5"
+                                    r="1.5"
+                                /></svg></span
+                        ><span
+                            >Мотели<small>по количеству номеров</small></span
+                        ></a
+                    >
+                </div>
+                <div class="sec-foot reveal">
+                    <span></span
+                    ><a class="more" href="/klassifikaciya-gostinic/"
+                        >Всё о классификации гостиниц</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section id="docs">
+            <div class="wrap">
+                <span class="eyebrow reveal">Документы</span>
+                <h2 class="h2 reveal">Минимальный пакет документов</h2>
+                <p class="lead reveal">
+                    Гостиницы в жилом фонде классификации не подлежат:
+                    назначение здания или помещения по ЕГРН должно быть нежилым
+                    — коммерческим, лечебно-санаторным и т.п.
+                </p>
+                <div class="tabs reveal" role="tablist">
+                    <button class="on" data-t="t1">Регистрация по типу</button>
+                    <button data-t="t2">Присвоение звёзд</button>
+                </div>
+                <div class="docs on" id="t1">
+                    <div class="doc">
+                        <div class="n">01</div>
+                        <h4>Выписка из ЕГРН</h4>
+                        <p>
+                            Нежилое назначение здания, коммерческий ВРИ земли.
+                            Если объект не в собственности — договор аренды,
+                            управления или безвозмездного пользования.
+                        </p>
+                    </div>
+                    <div class="doc">
+                        <div class="n">02</div>
+                        <h4>Договор на вывоз мусора</h4>
+                        <p>
+                            Действующий договор с региональным оператором или
+                            подрядчиком.
+                        </p>
+                    </div>
+                    <div class="doc">
+                        <div class="n">03</div>
+                        <h4>Фото гостиницы</h4>
+                        <p>Фотографии объекта — фасад, номера, общие зоны.</p>
+                    </div>
+                </div>
+                <div class="docs" id="t2">
+                    <div class="doc">
+                        <div class="n">01</div>
+                        <h4>Документы на недвижимость</h4>
+                        <p>
+                            Выписка из ЕГРН или свидетельство о праве
+                            собственности; при аренде — договор аренды,
+                            управления или пользования.
+                        </p>
+                    </div>
+                    <div class="doc">
+                        <div class="n">02</div>
+                        <h4>Выписка из реестра КСР</h4>
+                        <p>
+                            Подтверждение регистрации в реестре
+                            классифицированных средств размещения.
+                        </p>
+                    </div>
+                    <div class="doc">
+                        <div class="n">03</div>
+                        <h4>Сведения об объекте</h4>
+                        <p>
+                            Информация о гостинице или ином средстве размещения
+                            по нашей анкете.
+                        </p>
+                    </div>
+                </div>
+                <p class="note reveal">
+                    Информация о классификации и категории размещается в
+                    официальном
+                    <a
+                        href="https://tourism.fsa.gov.ru/ru/main"
+                        target="_blank"
+                        rel="noopener"
+                        >реестре ФСА</a
+                    >.
+                </p>
+            </div>
+        </section>
+
+        <section id="iso" style="background: var(--surface-2)">
+            <div class="wrap">
+                <span class="eyebrow reveal">Сертификация ISO</span>
+                <h2 class="h2 reveal">Сертификаты систем менеджмента</h2>
+                <p class="lead reveal">
+                    Подтверждение соответствия международным требованиям даёт
+                    преимущество в тендерах, закупках и при заключении
+                    госконтрактов.
+                </p>
+                <div class="iso-grid">
+                    <div class="iso reveal">
+                        <b>ISO 9001</b><span>Система менеджмента качества</span
+                        ><em>от 9 900 ₽</em>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 14001</b><span>Экологический менеджмент</span
+                        ><em>от 15 000 ₽</em>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 22000</b
+                        ><span>Безопасность пищевой продукции</span
+                        ><em>от 15 000 ₽</em>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ИСМ</b
+                        ><span
+                            >Интегрированная система: 9001 + 14001 + 54934</span
+                        ><em>от 25 000 ₽</em>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 45001</b><span>Охрана труда</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 27001</b><span>Информационная безопасность</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 13485</b><span>Медицинские изделия</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 17025</b
+                        ><span>Испытательные и калибровочные лаборатории</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 50001</b><span>Энергетический менеджмент</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 22301</b><span>Непрерывность бизнеса</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 28001</b><span>Безопасность цепи поставок</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 29001</b><span>СМК в нефтегазовой отрасли</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ISO 21500</b><span>Управление проектами</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ГОСТ Р ИСО 20121</b
+                        ><span>Устойчивое управление мероприятиями</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ГОСТ Р ИСО 15189</b
+                        ><span>Медицинские лаборатории</span>
+                    </div>
+                    <div class="iso reveal">
+                        <b>ГОСТ Р 54536</b><span>Кибербезопасность</span>
+                    </div>
+                </div>
+                <div class="sec-foot reveal">
+                    <span class="note" style="margin: 0"
+                        >Не нашли свой стандарт? Подберём бесплатно.</span
+                    ><a class="btn btn-dark" href="/sertifikaciya-iso/"
+                        >Все стандарты ISO и сроки</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="dark-sec">
+            <div class="wrap">
+                <span class="eyebrow reveal">Почему мы</span>
+                <h2 class="h2 reveal">Быстро, по договору, без лишних бумаг</h2>
+                <p class="lead reveal">
+                    Нам важно, чтобы каждый клиент получил профессиональную
+                    помощь и быстро решил задачи по оформлению документов.
+                </p>
+                <div class="why">
+                    <div class="reveal">
+                        <svg
+                            width="26"
+                            height="26"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        >
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 7v5l3 2" /></svg
+                        ><span><b>От 1 дня</b>срок подготовки документа</span>
+                    </div>
+                    <div class="reveal">
+                        <svg
+                            width="26"
+                            height="26"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                            /></svg
+                        ><span
+                            ><b>Всегда на связи</b>телефон, Telegram, MAX,
+                            почта</span
+                        >
+                    </div>
+                    <div class="reveal">
+                        <svg
+                            width="26"
+                            height="26"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                            />
+                            <path d="M14 2v6h6M9 15l2 2 4-4" /></svg
+                        ><span
+                            ><b>Работа по договору</b>официально и
+                            прозрачно</span
+                        >
+                    </div>
+                    <div class="reveal">
+                        <svg
+                            width="26"
+                            height="26"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        >
+                            <circle cx="12" cy="12" r="9" />
+                            <path
+                                d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"
+                            /></svg
+                        ><span
+                            ><b>Вся Россия</b>дистанционно в любом регионе</span
+                        >
+                    </div>
+                    <div class="reveal">
+                        <svg
+                            width="26"
+                            height="26"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        >
+                            <path
+                                d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"
+                            /></svg
+                        ><span
+                            ><b>Доступная цена</b>фиксируем стоимость
+                            заранее</span
+                        >
+                    </div>
+                    <div class="reveal">
+                        <svg
+                            width="26"
+                            height="26"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M4 6h16M4 12h10M4 18h6" /></svg
+                        ><span
+                            ><b>Минимум документов</b>основную работу берём на
+                            себя</span
+                        >
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step reveal">
+                        <b>Заявка</b
+                        ><span>Оставьте запрос или напишите в Telegram</span>
+                    </div>
+                    <div class="step reveal">
+                        <b>Консультация</b
+                        ><span>Бесплатно подберём услугу и назовём цену</span>
+                    </div>
+                    <div class="step reveal">
+                        <b>Договор и документы</b
+                        ><span
+                            >Подписываем договор, вы присылаете минимальный
+                            пакет</span
+                        >
+                    </div>
+                    <div class="step reveal">
+                        <b>Результат</b
+                        ><span>Запись в реестре или готовый документ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="geo">
+            <div class="wrap">
+                <div class="geo-head">
+                    <div>
+                        <span class="eyebrow reveal">География</span>
+                        <h2 class="h2 reveal">Работаем во всех регионах</h2>
+                        <p class="lead reveal">
+                            Классификация гостиниц, отелей, санаториев и
+                            загородных отелей — со звёздами и без.
+                        </p>
+                    </div>
+                    <div class="search reveal">
+                        <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.2"
+                            stroke-linecap="round"
+                        >
+                            <circle cx="11" cy="11" r="7" />
+                            <path d="M20 20l-3.5-3.5" />
+                        </svg>
+                        <input
+                            id="q"
+                            type="search"
+                            placeholder="Найдите свой город"
+                            autocomplete="off"
+                        />
+                    </div>
+                </div>
+                <div class="sec-foot reveal" style="margin-top: 18px">
+                    <span class="note" style="margin: 0"
+                        >Города с отдельной страницей подчёркнуты — там цены и
+                        условия для вашего региона.</span
+                    ><a class="more" href="/klassifikaciya-gostinic-po-gorodam/"
+                        >Все города</a
+                    >
+                </div>
+                <div class="hubs reveal" id="hubs"></div>
+                <div class="regions" id="regions"></div>
+                <p class="empty" id="empty">
+                    Города нет в списке? Не страшно — мы работаем по всей
+                    России. Просто оставьте заявку.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" style="background: var(--surface-2)">
+            <div class="wrap contact">
+                <div>
+                    <span class="eyebrow reveal">Контакты</span>
+                    <h2 class="h2 reveal">Бесплатная консультация</h2>
+                    <p class="lead reveal">
+                        Свяжитесь удобным способом или отправьте запрос —
+                        ответим в выбранном вами канале.
+                    </p>
+                    <div class="c-list">
+                        <a class="c-item reveal" href="tel:+79920100537"
+                            ><span class="ic"
+                                ><svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"
+                                    /></svg></span
+                            ><span
+                                ><small>Телефон</small
+                                ><b>+7 (992) 010-05-37</b></span
+                            ></a
+                        >
+                        <a
+                            class="c-item reveal"
+                            href="https://t.me/Olga36541"
+                            target="_blank"
+                            rel="noopener"
+                            ><span class="ic"
+                                ><svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M22 2L11 13M22 2l-7 20-4-9-9-4z"
+                                    /></svg></span
+                            ><span
+                                ><small>Telegram</small
+                                ><b>+7 (992) 010-05-37</b></span
+                            ></a
+                        >
+                        <a class="c-item reveal" href="tel:+79920100508"
+                            ><span class="ic"
+                                ><svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                                    /></svg></span
+                            ><span
+                                ><small>Мессенджер MAX</small
+                                ><b>+7 (992) 010-05-08</b></span
+                            ></a
+                        >
+                        <a
+                            class="c-item reveal"
+                            href="mailto:info@sertifikats.ru"
+                            ><span class="ic"
+                                ><svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect
+                                        x="2"
+                                        y="4"
+                                        width="20"
+                                        height="16"
+                                        rx="2"
+                                    />
+                                    <path d="M22 7l-10 6L2 7" /></svg></span
+                            ><span
+                                ><small>Email</small
+                                ><b>info@sertifikats.ru</b></span
+                            ></a
+                        >
+                    </div>
+                </div>
+                <form class="f reveal" id="form" novalidate>
+                    <label
+                        >Имя<input
+                            name="name"
+                            placeholder="Как к вам обращаться"
+                    /></label>
+                    <label
+                        >Телефон *<input
+                            name="phone"
+                            type="tel"
+                            required
+                            placeholder="+7 (___) ___-__-__"
+                    /></label>
+                    <label
+                        >Email<input
+                            name="email"
+                            type="email"
+                            placeholder="you@company.ru"
+                    /></label>
+                    <label
+                        >Город<input
+                            name="city"
+                            placeholder="Например, Екатеринбург"
+                    /></label>
+                    <label class="full"
+                        >Документ *
+                        <select name="doc" required>
+                            <option value="">Выберите документ</option>
+                            <option>
+                                Классификация гостиницы. Регистрация в реестре
+                                без звёзд
+                            </option>
+                            <option>
+                                Классификация гостиницы. Присвоение категории
+                                звёзд
+                            </option>
+                            <option>Сертификат ISO</option>
+                            <option>Паспорт безопасности</option>
+                            <option>
+                                Удостоверение о повышении квалификации
+                            </option>
+                            <option>
+                                Диплом о профессиональной переподготовке
+                            </option>
+                            <option>Другой документ</option>
+                        </select>
+                    </label>
+                    <label class="full"
+                        >Сообщение<textarea
+                            name="msg"
+                            placeholder="Расскажите об объекте или задаче"
+                        ></textarea>
+                    </label>
+                    <div class="full">
+                        <label style="margin-bottom: 8px"
+                            >Предпочтительный способ связи</label
+                        >
+                        <div class="seg">
+                            <label
+                                ><input
+                                    type="radio"
+                                    name="via"
+                                    value="Телефон"
+                                    checked
+                                /><span>Телефон</span></label
+                            >
+                            <label
+                                ><input
+                                    type="radio"
+                                    name="via"
+                                    value="Telegram"
+                                /><span>Telegram</span></label
+                            >
+                            <label
+                                ><input
+                                    type="radio"
+                                    name="via"
+                                    value="Email"
+                                /><span>Email</span></label
+                            >
+                        </div>
+                    </div>
+                    <div class="full">
+                        <button class="btn btn-gold" type="submit">
+                            Отправить запрос
+                        </button>
+                    </div>
+                    <p class="consent full">
+                        Нажимая «Отправить», я подтверждаю согласие на обработку
+                        персональных данных в соответствии с Политикой
+                        конфиденциальности.
+                    </p>
+                    <div class="ok-msg full" id="ok"></div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrap">
+                <div class="f-grid">
+                    <div>
+                        <a href="#top" class="logo" style="color: inherit"
+                            ><span class="logo-mark"
+                                ><svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"
+                                    /></svg></span
+                            ><span>Центр сертификации Промо</span></a
+                        >
+                        <p
+                            style="
+                                opacity: 0.6;
+                                margin-top: 14px;
+                                font-size: 14px;
+                                max-width: 340px;
+                            "
+                        >
+                            Классификация средств размещения, сертификация ISO,
+                            паспорта безопасности и обучение персонала по всей
+                            России.
+                        </p>
+                    </div>
+                    <div>
+                        <h5>Классификация</h5>
+                        <div class="links">
+                            <a
+                                href="/registraciya-v-reestre-klassificirovannykh-sredstv-razmeshcheniya/"
+                                >Регистрация в реестре КСР</a
+                            ><a href="/klassifikaciya-gostinic/"
+                                >Классификация гостиниц</a
+                            ><a href="/klassifikaciya-gostinicy-bez-zvezd/"
+                                >Без звёзд</a
+                            ><a href="/klassifikaciya-gostinicy-na-tri-zvezdy/"
+                                >3 звезды</a
+                            ><a href="/klassifikaciya-gostinicy-na-pyat-zvezd/"
+                                >5 звёзд</a
+                            ><a href="/klassifikacia-gostinic-prais/">Прайс</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Услуги</h5>
+                        <div class="links">
+                            <a href="/sertifikaciya-iso/">Сертификация ISO</a
+                            ><a href="/pasport-bezopasnosti/"
+                                >Паспорт безопасности</a
+                            ><a href="/upk-i-professionalnaya-perepodgotovka/"
+                                >УПК и переподготовка</a
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Популярные города</h5>
+                        <div class="links">
+                            <a href="/klassifikaciya-gostinic/moscow/">Москва</a
+                            ><a href="/klassifikaciya-gostinic/st-petersburg/"
+                                >Санкт-Петербург</a
+                            ><a href="/klassifikaciya-gostinic/sochi/">Сочи</a
+                            ><a href="/klassifikaciya-gostinic/kazan/">Казань</a
+                            ><a href="/klassifikaciya-gostinic/ekaterinburg/"
+                                >Екатеринбург</a
+                            ><a href="/klassifikaciya-gostinic-po-gorodam/"
+                                >Все города →</a
+                            >
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Связь</h5>
+                        <div class="links">
+                            <a href="/contacts/">Контакты</a>
+                            <a href="tel:+79920100537">+7 (992) 010-05-37</a
+                            ><a href="mailto:info@sertifikats.ru"
+                                >info@sertifikats.ru</a
+                            ><a
+                                href="https://t.me/Olga36541"
+                                target="_blank"
+                                rel="noopener"
+                                >Telegram</a
+                            ><a
+                                href="https://vk.com/promoural"
+                                target="_blank"
+                                rel="noopener"
+                                >ВКонтакте</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="copy">
+                    <span
+                        >© 2004–2026 Центр сертификации Промо. Все права
+                        защищены.</span
+                    ><button class="theme-t" id="tt">Сменить тему</button>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const HUBS =
+                "Москва,Санкт-Петербург,Екатеринбург,Новосибирск,Казань,Краснодар,Сочи,Нижний Новгород,Самара,Уфа,Челябинск,Пермь,Тюмень,Омск,Красноярск,Иркутск,Владивосток,Калининград,Воронеж,Волгоград,Ростов-на-Дону,Сургут,Ханты-Мансийск,Барнаул".split(
+                    ",",
+                );
+            const R = [
+                ["Москва", "Москва"],
+                ["Санкт-Петербург", "Санкт-Петербург"],
+                [
+                    "Алтайский край",
+                    "Барнаул Алейск Белокуриха Бийск Горняк Заринск Змеиногорск Камень-на-Оби Новоалтайск Рубцовск Славгород Яровое",
+                ],
+                [
+                    "Республика Алтай",
+                    "Горно-Алтайск, Кош-Агачский, Майминский, Онгудайский, Турочакский, Улаганский, Усть-Канский, Усть-Коксинский, Чемальский, Чойский, Шебалинский районы",
+                ],
+                [
+                    "Амурская область",
+                    "Белогорск Благовещенск Завитинск Зея Райчихинск Свободный Сковородино Тында Циолковский Шимановск",
+                ],
+                [
+                    "Архангельская область",
+                    "Архангельск Вельск Каргополь Коряжма Котлас Мезень Мирный Новодвинск Няндома Онега Северодвинск Сольвычегодск Шенкурск",
+                ],
+                [
+                    "Астраханская область",
+                    "Астрахань Ахтубинск Знаменск Камызяк Нариманов Харабали",
+                ],
+                [
+                    "Башкортостан",
+                    "Агидель Баймак Белебей Белорецк Бирск Благовещенск Давлеканово Дюртюли Ишимбай Кумертау Межгорье Мелеуз Нефтекамск Октябрьский Салават Сибай Стерлитамак Туймазы Уфа Учалы Янаул",
+                ],
+                [
+                    "Бурятия",
+                    "Бабушкин Гусиноозёрск Закаменск Кяхта Северобайкальск Улан-Удэ",
+                ],
+                [
+                    "Волгоградская область",
+                    "Волгоград Волжский Дубовка Жирновск Калач-на-Дону Камышин Котельниково Котово Краснослободск Ленинск Михайловка Николаевск Новоаннинский Палласовка Петров Вал Серафимович Суровикино Урюпинск Фролово",
+                ],
+                [
+                    "Вологодская область",
+                    "Бабаево Белозерск Великий Устюг Вологда Вытегра Грязовец Кадников Кириллов Красавино Никольск Сокол Тотьма Устюжна Харовск Череповец",
+                ],
+                [
+                    "Воронежская область",
+                    "Бобров Богучар Борисоглебск Бутурлиновка Воронеж Калач Лиски Нововоронеж Новохопёрск Острогожск Павловск Поворино Россошь Семилуки Эртиль",
+                ],
+                [
+                    "Забайкальский край",
+                    "Балей Борзя Краснокаменск Могоча Нерчинск Петровск-Забайкальский Сретенск Хилок Чита Шилка",
+                ],
+                [
+                    "Ивановская область",
+                    "Вичуга Гаврилов Посад Заволжск Иваново Кинешма Комсомольск Кохма Наволоки Плёс Приволжск Пучеж Родники Тейково Фурманов",
+                ],
+                [
+                    "Иркутская область",
+                    "Алзамай Ангарск Байкальск Бирюсинск Бодайбо Братск Вихоревка Железногорск-Илимский Зима Иркутск Киренск Нижнеудинск Саянск Свирск Слюдянка Тайшет Тулун Усолье-Сибирское Усть-Илимск Усть-Кут Черемхово Шелехов",
+                ],
+                [
+                    "Калининградская область",
+                    "Багратионовск Балтийск Гвардейск Гурьевск Гусев Зеленоградск Калининград Краснознаменск Ладушкин Мамоново Неман Нестеров Озёрск Пионерский Полесск Правдинск Приморск Светлогорск Светлый Славск Советск Черняховск",
+                ],
+                [
+                    "Калужская область",
+                    "Балабаново Белоусово Боровск Ермолино Жиздра Жуков Калуга Киров Козельск Кондрово Кремёнки Людиново Малоярославец Медынь Мещовск Мосальск Обнинск Сосенский Спас-Деменск Сухиничи Таруса Юхнов",
+                ],
+                [
+                    "Камчатский край",
+                    "Вилючинск Елизово Петропавловск-Камчатский",
+                ],
+                [
+                    "Карелия",
+                    "Беломорск Кемь Кондопога Костомукша Лахденпохья Медвежьегорск Олонец Петрозаводск Питкяранта Пудож Сегежа Сортавала Суоярви",
+                ],
+                [
+                    "Кемеровская область",
+                    "Анжеро-Судженск Белово Берёзовский Гурьевск Калтан Кемерово Киселёвск Ленинск-Кузнецкий Мариинск Междуреченск Мыски Новокузнецк Осинники Полысаево Прокопьевск Салаир Тайга Таштагол Топки Юрга",
+                ],
+                [
+                    "Кировская область",
+                    "Белая Холуница Вятские Поляны Зуевка Киров Кирово-Чепецк Кирс Котельнич Луза Малмыж Мураши Нолинск Омутнинск Орлов Слободской Советск Сосновка Уржум Яранск",
+                ],
+                [
+                    "Коми",
+                    "Воркута Вуктыл Емва Инта Микунь Печора Сосногорск Сыктывкар Усинск Ухта",
+                ],
+                [
+                    "Костромская область",
+                    "Буй Волгореченск Галич Кологрив Кострома Макарьев Мантурово Нерехта Нея Солигалич Чухлома Шарья",
+                ],
+                [
+                    "Краснодарский край",
+                    "Абинск Анапа Апшеронск Армавир Белореченск Геленджик Горячий Ключ Гулькевичи Ейск Кореновск Краснодар Кропоткин Крымск Курганинск Лабинск Новокубанск Новороссийск Приморско-Ахтарск Славянск-на-Кубани Сочи Темрюк Тимашёвск Тихорецк Туапсе Усть-Лабинск Хадыженск",
+                ],
+                [
+                    "Красноярский край",
+                    "Артёмовск Ачинск Боготол Бородино Дивногорск Дудинка Енисейск Железногорск Заозёрный Зеленогорск Игарка Иланский Канск Кодинск Красноярск Лесосибирск Минусинск Назарово Норильск Сосновоборск Ужур Уяр Шарыпово",
+                ],
+                [
+                    "Курганская область",
+                    "Далматово Катайск Курган Куртамыш Макушино Петухово Шадринск Шумиха Щучье",
+                ],
+                [
+                    "Ленинградская область",
+                    "Бокситогорск Бугры Волосово Волхов Всеволожск Выборг Высоцк Гатчина Ивангород Каменногорск Кингисепп Кириши Кировск Колтуши Коммунар Кудрово Лодейное Поле Луга Любань Мурино Никольское Новая Ладога Отрадное Пикалёво Подпорожье Приморск Приозерск Светогорск Сертолово Сланцы Сосновый Бор Сясьстрой Тельмана Тихвин Тосно Шлиссельбург",
+                ],
+                [
+                    "Липецкая область",
+                    "Грязи Данков Елец Задонск Лебедянь Липецк Усмань Чаплыгин",
+                ],
+                ["Магаданская область", "Магадан Сусуман"],
+                ["Марий Эл", "Волжск Звенигово Йошкар-Ола Козьмодемьянск"],
+                [
+                    "Мордовия",
+                    "Ардатов Инсар Ковылкино Краснослободск Рузаевка Саранск Темников",
+                ],
+                [
+                    "Московская область",
+                    "Апрелевка Балашиха Белоозёрский Бронницы Верея Видное Волоколамск Воскресенск Высоковск Голицыно Дедовск Дзержинский Дмитров Долгопрудный Домодедово Дрезна Дубна Егорьевск Жуковский Зарайск Звенигород Ивантеевка Истра Кашира Клин Коломна Королёв Котельники Красноармейск Красногорск Краснозаводск Краснознаменск Кубинка Куровское Ликино-Дулёво Лобня Лосино-Петровский Луховицы Лыткарино Люберцы Можайск Мытищи Наро-Фоминск Ногинск Одинцово Озёры Орехово-Зуево Павловский Посад Пересвет Подольск Протвино Пушкино Пущино Раменское Реутов Рошаль Руза Сергиев Посад Серпухов Солнечногорск Старая Купавна Ступино Талдом Фрязино Химки Хотьково Черноголовка Чехов Шатура Щёлково Электрогорск Электросталь Электроугли Яхрома",
+                ],
+                [
+                    "Мурманская область",
+                    "Апатиты Гаджиево Заозёрск Заполярный Кандалакша Кировск Ковдор Кола Мончегорск Мурманск Оленегорск Островной Полярные Зори Полярный Североморск Снежногорск",
+                ],
+                ["Ненецкий АО", "Нарьян-Мар"],
+                [
+                    "Нижегородская область",
+                    "Арзамас Балахна Богородск Бор Ветлуга Володарск Ворсма Выкса Горбатов Городец Дзержинск Заволжье Княгинино Кстово Кулебаки Лукоянов Лысково Навашино Нижний Новгород Павлово Первомайск Перевоз Саров Семёнов Сергач Урень Чкаловск Шахунья",
+                ],
+                [
+                    "Новгородская область",
+                    "Боровичи Валдай Великий Новгород Малая Вишера Окуловка Пестово Сольцы Старая Русса Холм Чудово",
+                ],
+                [
+                    "Новосибирская область",
+                    "Барабинск Бердск Болотное Искитим Карасук Каргат Куйбышев Купино Новосибирск Обь Татарск Тогучин Черепаново Чулым",
+                ],
+                [
+                    "Омская область",
+                    "Исилькуль Калачинск Называевск Омск Тара Тюкалинск",
+                ],
+                [
+                    "Оренбургская область",
+                    "Абдулино Бугуруслан Бузулук Гай Кувандык Медногорск Новотроицк Оренбург Орск Соль-Илецк Сорочинск Ясный",
+                ],
+                [
+                    "Орловская область",
+                    "Болхов Дмитровск Ливны Малоархангельск Мценск Новосиль Орёл",
+                ],
+                [
+                    "Пензенская область",
+                    "Белинский Городище Заречный Каменка Кузнецк Нижний Ломов Никольск Пенза Сердобск Спасск Сурск",
+                ],
+                [
+                    "Пермский край",
+                    "Александровск Березники Верещагино Горнозаводск Гремячинск Губаха Добрянка Кизел Красновишерск Краснокамск Кудымкар Кунгур Лысьва Нытва Оса Оханск Очёр Пермь Соликамск Усолье Чайковский Чердынь Чёрмоз Чернушка Чусовой",
+                ],
+                [
+                    "Приморский край",
+                    "Арсеньев Артём Большой Камень Владивосток Дальнегорск Дальнереченск Лесозаводск Находка Партизанск Спасск-Дальний Уссурийск Фокино",
+                ],
+                [
+                    "Псковская область",
+                    "Великие Луки Гдов Дно Невель Новоржев Новосокольники Остров Печоры Порхов Псков Пустошка Пыталово Себеж",
+                ],
+                [
+                    "Ростовская область",
+                    "Азов Аксай Батайск Белая Калитва Волгодонск Гуково Донецк Зверево Зерноград Каменск-Шахтинский Константиновск Красный Сулин Миллерово Морозовск Новочеркасск Новошахтинск Пролетарск Ростов-на-Дону Сальск Семикаракорск Таганрог Цимлянск Шахты",
+                ],
+                [
+                    "Рязанская область",
+                    "Касимов Кораблино Михайлов Новомичуринск Рыбное Ряжск Рязань Сасово Скопин Спас-Клепики Спасск-Рязанский Шацк",
+                ],
+                [
+                    "Самарская область",
+                    "Жигулёвск Кинель Нефтегорск Новокуйбышевск Октябрьск Отрадный Похвистнево Самара Сызрань Тольятти Чапаевск",
+                ],
+                [
+                    "Саратовская область",
+                    "Аркадак Аткарск Балаково Балашов Вольск Ершов Калининск Красноармейск Красный Кут Маркс Новоузенск Петровск Пугачёв Ртищево Саратов Хвалынск Шиханы Энгельс",
+                ],
+                [
+                    "Сахалинская область",
+                    "Александровск-Сахалинский Анива Долинск Корсаков Курильск Макаров Невельск Оха Поронайск Северо-Курильск Томари Углегорск Холмск Южно-Сахалинск",
+                ],
+                [
+                    "Свердловская область",
+                    "Алапаевск Арамиль Артёмовский Асбест Берёзовский Богданович Верхний Тагил Верхняя Пышма Верхняя Салда Верхняя Тура Верхотурье Волчанск Дегтярск Екатеринбург Заречный Ивдель Ирбит Каменск-Уральский Камышлов Карпинск Качканар Кировград Краснотурьинск Красноуральск Красноуфимск Кушва Лесной Михайловск Невьянск Нижние Серги Нижний Тагил Нижняя Салда Нижняя Тура Новая Ляля Новоуральск Первоуральск Полевской Ревда Реж Североуральск Серов Среднеуральск Сухой Лог Сысерть Тавда Талица Туринск",
+                ],
+                [
+                    "Смоленская область",
+                    "Велиж Вязьма Гагарин Демидов Десногорск Дорогобуж Духовщина Ельня Починок Рославль Рудня Сафоново Смоленск Сычёвка Ярцево",
+                ],
+                [
+                    "Ставропольский край",
+                    "Благодарный Будённовск Георгиевск Ессентуки Железноводск Зеленокумск Изобильный Ипатово Кисловодск Лермонтов Минеральные Воды Михайловск Невинномысск Нефтекумск Новоалександровск Новопавловск Пятигорск Светлоград Ставрополь",
+                ],
+                [
+                    "Тамбовская область",
+                    "Жердевка Кирсанов Котовск Мичуринск Моршанск Рассказово Тамбов Уварово",
+                ],
+                [
+                    "Татарстан",
+                    "Агрыз Азнакаево Альметьевск Арск Бавлы Болгар Бугульма Буинск Елабуга Заинск Зеленодольск Иннополис Казань Кукмор Лаишево Лениногорск Мамадыш Менделеевск Мензелинск Набережные Челны Нижнекамск Нурлат Тетюши Чистополь",
+                ],
+                [
+                    "Тверская область",
+                    "Андреаполь Бежецк Белый Бологое Весьегонск Вышний Волочёк Западная Двина Зубцов Калязин Кашин Кимры Конаково Красный Холм Кувшиново Лихославль Нелидово Осташков Ржев Старица Тверь Торжок Торопец Удомля",
+                ],
+                [
+                    "Томская область",
+                    "Асино Кедровый Колпашево Северск Стрежевой Томск",
+                ],
+                [
+                    "Тульская область",
+                    "Алексин Белёв Богородицк Болохово Венёв Донской Ефремов Кимовск Киреевск Липки Новомосковск Плавск Советск Суворов Тула Узловая Чекалин Щёкино Ясногорск",
+                ],
+                [
+                    "Тюменская область",
+                    "Заводоуковск Ишим Тобольск Тюмень Ялуторовск",
+                ],
+                ["Удмуртия", "Воткинск Глазов Ижевск Камбарка Можга Сарапул"],
+                [
+                    "Ульяновская область",
+                    "Барыш Димитровград Инза Новоульяновск Сенгилей Ульяновск",
+                ],
+                [
+                    "Хабаровский край",
+                    "Амурск Бикин Вяземский Комсомольск-на-Амуре Николаевск-на-Амуре Советская Гавань Хабаровск",
+                ],
+                [
+                    "Ханты-Мансийский АО",
+                    "Белоярский Когалым Лангепас Лянтор Мегион Нефтеюганск Нижневартовск Нягань Покачи Пыть-Ях Радужный Советский Сургут Урай Ханты-Мансийск Югорск",
+                ],
+                [
+                    "Челябинская область",
+                    "Аша Бакал Верхнеуральск Верхний Уфалей Еманжелинск Златоуст Карабаш Карталы Касли Катав-Ивановск Копейск Коркино Куса Кыштым Магнитогорск Миасс Миньяр Нязепетровск Озёрск Пласт Сатка Сим Снежинск Трёхгорный Троицк Усть-Катав Чебаркуль Челябинск Южноуральск Юрюзань",
+                ],
+                [
+                    "Чувашия",
+                    "Алатырь Канаш Козловка Мариинский Посад Новочебоксарск Цивильск Чебоксары Шумерля Ядрин",
+                ],
+                ["Чукотский АО", "Анадырь Билибино Певек"],
+                [
+                    "Якутия",
+                    "Алдан Верхоянск Вилюйск Ленск Мирный Нерюнгри Нюрба Олёкминск Покровск Среднеколымск Томмот Удачный Якутск",
+                ],
+                [
+                    "Ямало-Ненецкий АО",
+                    "Губкинский Лабытнанги Муравленко Надым Новый Уренгой Ноябрьск Салехард Тарко-Сале",
+                ],
+                [
+                    "Ярославская область",
+                    "Гаврилов-Ям Данилов Любим Мышкин Переславль-Залесский Пошехонье Ростов Рыбинск Тутаев Углич Ярославль",
+                ],
+            ];
+            const multi = new Set([
+                "Гаврилов Посад",
+                "Белая Холуница",
+                "Вятские Поляны",
+                "Горячий Ключ",
+                "Лодейное Поле",
+                "Новая Ладога",
+                "Сосновый Бор",
+                "Павловский Посад",
+                "Сергиев Посад",
+                "Старая Купавна",
+                "Полярные Зори",
+                "Нижний Новгород",
+                "Великий Новгород",
+                "Малая Вишера",
+                "Старая Русса",
+                "Нижний Ломов",
+                "Большой Камень",
+                "Великие Луки",
+                "Белая Калитва",
+                "Красный Сулин",
+                "Красный Кут",
+                "Верхний Тагил",
+                "Верхняя Пышма",
+                "Верхняя Салда",
+                "Верхняя Тура",
+                "Нижние Серги",
+                "Нижний Тагил",
+                "Нижняя Салда",
+                "Нижняя Тура",
+                "Новая Ляля",
+                "Сухой Лог",
+                "Минеральные Воды",
+                "Набережные Челны",
+                "Вышний Волочёк",
+                "Западная Двина",
+                "Красный Холм",
+                "Верхний Уфалей",
+                "Мариинский Посад",
+                "Новый Уренгой",
+                "Петров Вал",
+                "Великий Устюг",
+            ]);
+            function cities(s) {
+                if (s.includes(",")) return s.split(",").map((x) => x.trim());
+                const w = s.split(" "),
+                    out = [];
+                for (let i = 0; i < w.length; i++) {
+                    const two = w[i] + " " + w[i + 1];
+                    if (multi.has(two)) {
+                        out.push(two);
+                        i++;
+                    } else out.push(w[i]);
+                }
+                return out;
+            }
+            const data = R.map(([r, s]) => ({ r, c: cities(s) }));
+            // города и регионы, у которых есть своя страница /klassifikaciya-gostinic/<slug>/
+            const CITY = {
+                Москва: "moscow",
+                "Санкт-Петербург": "st-petersburg",
+                Анапа: "anapa",
+                Астрахань: "astrakhan",
+                Барнаул: "barnaul",
+                Владивосток: "vladivostok",
+                Владимир: "vladimir",
+                Волгоград: "volgograd",
+                Вологда: "vologda",
+                Воронеж: "voronezh",
+                Екатеринбург: "ekaterinburg",
+                Иваново: "ivanovo",
+                Ижевск: "izhevsk",
+                Иркутск: "irkutsk",
+                "Йошкар-Ола": "ioshkar-ola",
+                Казань: "kazan",
+                Калининград: "kaliningrad",
+                Калуга: "kaluga",
+                Кемерово: "kemerovo",
+                Киров: "kirov",
+                Кострома: "kostroma",
+                Краснодар: "krasnodar",
+                Красноярск: "krasnoyarsk",
+                Курган: "kurgan",
+                Липецк: "lipetsk",
+                Мурманск: "murmansk",
+                "Набережные Челны": "naberezhnye-chelny",
+                "Нижний Новгород": "nizhny-novgorod",
+                Новосибирск: "novosibirsk",
+                Омск: "omsk",
+                Орёл: "orel",
+                Оренбург: "orenburg",
+                Пенза: "penza",
+                Пермь: "perm",
+                Петрозаводск: "petrozavodsk",
+                "Ростов-на-Дону": "rostov-na-donu",
+                Рязань: "ryazan",
+                Самара: "samara",
+                Саратов: "saratov",
+                Сочи: "sochi",
+                Ставрополь: "stavropol",
+                Сургут: "surgut",
+                Тамбов: "tambov",
+                Тверь: "tver",
+                Тольятти: "tolyatti",
+                Томск: "tomsk",
+                Тула: "tula",
+                Тюмень: "tumen",
+                Ульяновск: "ulyanovsk",
+                Уфа: "ufa",
+                Хабаровск: "khabarovsk",
+                "Ханты-Мансийск": "khanty-mansyisk",
+                Чебоксары: "cheboksary",
+                Челябинск: "chelyabinsk",
+                Чита: "chita",
+                Ярославль: "yaroslavl",
+            };
+            const REGION = {
+                "Республика Алтай": "altay",
+                "Алтайский край": "altay",
+                "Сахалинская область": "sahalin",
+            };
+            const cityUrl = (s) => `/klassifikaciya-gostinic/${s}/`;
+            const regEl = document.getElementById("regions"),
+                empty = document.getElementById("empty");
+            document.getElementById("hubs").innerHTML = HUBS.map((h) =>
+                CITY[h]
+                    ? `<a href="${cityUrl(CITY[h])}">${h}</a>`
+                    : `<span>${h}</span>`,
+            ).join("");
+            const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            function render(q = "") {
+                q = q.trim().toLowerCase().replace(/ё/g, "е");
+                const norm = (s) => s.toLowerCase().replace(/ё/g, "е");
+                let html = "",
+                    n = 0;
+                for (const d of data) {
+                    const hitR = q && norm(d.r).includes(q);
+                    const hits = q
+                        ? d.c.filter((c) => norm(c).includes(q))
+                        : d.c;
+                    if (q && !hitR && !hits.length) continue;
+                    n++;
+                    const list = d.c
+                        .map((c) => {
+                            const t =
+                                q && norm(c).includes(q)
+                                    ? `<mark>${c}</mark>`
+                                    : c;
+                            return CITY[c]
+                                ? `<a href="${cityUrl(CITY[c])}">${t}</a>`
+                                : t;
+                        })
+                        .join(" · ");
+                    const go = REGION[d.r]
+                        ? `<a class="go more" href="${cityUrl(REGION[d.r])}">Страница региона</a>`
+                        : "";
+                    html += `<details class="reg"${q ? " open" : ""}><summary>${d.r}<small>${d.c.length > 1 ? d.c.length + " нас. пунктов" : ""}</small></summary><p>${list}${go}</p></details>`;
+                }
+                regEl.innerHTML = html;
+                empty.style.display = n ? "none" : "block";
+            }
+            render();
+            document
+                .getElementById("q")
+                .addEventListener("input", (e) => render(e.target.value));
+
+            document.querySelectorAll(".tabs button").forEach(
+                (b) =>
+                    (b.onclick = () => {
+                        document
+                            .querySelectorAll(".tabs button")
+                            .forEach((x) => x.classList.toggle("on", x === b));
+                        document
+                            .querySelectorAll(".docs")
+                            .forEach((x) =>
+                                x.classList.toggle("on", x.id === b.dataset.t),
+                            );
+                    }),
+            );
+
+            document.getElementById("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+                const f = e.target,
+                    ok = document.getElementById("ok");
+                if (!f.phone.value.trim() || !f.doc.value) {
+                    ok.style.display = "block";
+                    ok.textContent =
+                        "Пожалуйста, укажите телефон и выберите документ.";
+                    return;
+                }
+                const body = `Имя: ${f.name.value}\nТелефон: ${f.phone.value}\nEmail: ${f.email.value}\nГород: ${f.city.value}\nДокумент: ${f.doc.value}\nСпособ связи: ${f.via.value}\n\n${f.msg.value}`;
+                window.location.href = `mailto:info@sertifikats.ru?subject=${encodeURIComponent("Запрос с сайта: " + f.doc.value)}&body=${encodeURIComponent(body)}`;
+                ok.style.display = "block";
+                ok.textContent =
+                    "Спасибо! Открываем почтовый клиент с готовым письмом — осталось нажать «Отправить».";
+            });
+
+            const tt = document.getElementById("tt"),
+                root = document.documentElement;
+            try {
+                const s = localStorage.getItem("theme");
+                if (s) root.dataset.theme = s;
+            } catch (e) {}
+            tt.onclick = () => {
+                const dark = root.dataset.theme
+                    ? root.dataset.theme === "dark"
+                    : matchMedia("(prefers-color-scheme: dark)").matches;
+                root.dataset.theme = dark ? "light" : "dark";
+                try {
+                    localStorage.setItem("theme", root.dataset.theme);
+                } catch (e) {}
+            };
+
+            // мега-меню: открытие по клику/клавиатуре (наведение работает через CSS)
+            document.querySelectorAll(".dd>button").forEach((b) =>
+                b.addEventListener("click", () => {
+                    const dd = b.parentElement,
+                        open = !dd.classList.contains("open");
+                    document.querySelectorAll(".dd.open").forEach((x) => {
+                        x.classList.remove("open");
+                        x.firstElementChild.setAttribute(
+                            "aria-expanded",
+                            "false",
+                        );
+                    });
+                    dd.classList.toggle("open", open);
+                    b.setAttribute("aria-expanded", open);
+                }),
+            );
+            document.addEventListener("click", (e) => {
+                if (!e.target.closest(".dd"))
+                    document
+                        .querySelectorAll(".dd.open")
+                        .forEach((x) => x.classList.remove("open"));
+            });
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape")
+                    document
+                        .querySelectorAll(".dd.open")
+                        .forEach((x) => x.classList.remove("open"));
+            });
+            document.querySelectorAll("[data-cityfilter]").forEach((inp) =>
+                inp.addEventListener("input", () => {
+                    const v = inp.value.trim().toLowerCase().replace(/ё/g, "е");
+                    inp.closest(".mega")
+                        .querySelectorAll(".mcities a")
+                        .forEach((a) =>
+                            a.classList.toggle(
+                                "hide",
+                                !a.textContent
+                                    .toLowerCase()
+                                    .replace(/ё/g, "е")
+                                    .includes(v),
+                            ),
+                        );
+                }),
+            );
+
+            // только для локального просмотра макета: ссылки ведут на живой сайт, пример страницы — на локальный файл. При внедрении удалить.
+            if (!/sertifikats\.ru$/.test(location.hostname))
+                document.addEventListener("click", (e) => {
+                    const a = e.target.closest('a[href^="/"]');
+                    if (!a) return;
+                    e.preventDefault();
+                    const p = a.getAttribute("href");
+                    const s = p.replace(/^\/|\/$/g, "");
+                    location.href =
+                        p === "/" || p.startsWith("/#")
+                            ? "index.html" + p.slice(1)
+                            : [
+                                    "registraciya-v-reestre-klassificirovannykh-sredstv-razmeshcheniya",
+                                    "klassifikaciya-gostinicy-bez-zvezd",
+                                    "klassifikaciya-gostinicy-na-odnu-zvezdu",
+                                    "klassifikaciya-gostinicy-na-dve-zvezdy",
+                                    "klassifikaciya-gostinicy-na-tri-zvezdy",
+                                    "klassifikaciya-gostinicy-na-chetyre-zvezdy",
+                                    "klassifikaciya-gostinicy-na-pyat-zvezd",
+                                ].includes(s)
+                              ? s + ".html"
+                              : "https://sertifikats.ru" + p;
+                });
+
+            const io = new IntersectionObserver(
+                (es) =>
+                    es.forEach((x) => {
+                        if (x.isIntersecting) {
+                            x.target.classList.add("in");
+                            io.unobserve(x.target);
+                        }
+                    }),
+                { threshold: 0.12 },
+            );
+            document
+                .querySelectorAll(".reveal")
+                .forEach((el) => io.observe(el));
+        </script>
+    </body>
+</html>
